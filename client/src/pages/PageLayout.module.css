@@ -1,0 +1,243 @@
+/* Reusable Secondary Pages CSS Module */
+
+.hero {
+  position: relative;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 140px;
+  padding-bottom: 60px;
+  text-align: center;
+  overflow: hidden;
+  background-color: var(--background);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  padding: 0 var(--margin-desktop);
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  background: rgba(196, 192, 255, 0.05);
+  border: 1px solid rgba(196, 192, 255, 0.2);
+  color: var(--primary);
+  font-family: var(--font-label);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--on-surface);
+  margin-bottom: 24px;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary-container) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--on-surface-variant);
+  opacity: 0.8;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--margin-desktop) 100px var(--margin-desktop);
+}
+
+/* Grid & Card layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gutter);
+}
+
+.col12 { grid-column: span 12; }
+.col8 { grid-column: span 8; }
+.col6 { grid-column: span 6; }
+.col4 { grid-column: span 4; }
+.col3 { grid-column: span 3; }
+
+.glassCard {
+  background: rgba(21, 28, 47, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.glassCard:hover {
+  border-color: rgba(196, 192, 255, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(196, 192, 255, 0.05);
+}
+
+.cardIcon {
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--on-surface);
+  margin-bottom: 16px;
+}
+
+.cardDesc {
+  color: var(--on-surface-variant);
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.cardLink {
+  color: var(--primary);
+  font-family: var(--font-label);
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  transition: transform 0.2s ease;
+}
+
+.cardLink:hover {
+  transform: translateX(4px);
+}
+
+/* Forms layout */
+.form {
+  background: rgba(21, 28, 47, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.label {
+  font-family: var(--font-label);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--on-surface);
+}
+
+.input, .textarea, .select {
+  background-color: var(--surface-dim);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input:focus, .textarea:focus, .select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 10px rgba(196, 192, 255, 0.2);
+}
+
+.textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.submitBtn {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary-container) 100%);
+  color: var(--on-primary);
+  border: none;
+  font-family: var(--font-label);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(196, 192, 255, 0.4);
+}
+
+/* Bullet list style */
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--on-surface-variant);
+}
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 40px;
+  }
+  
+  .container {
+    padding-left: var(--margin-mobile);
+    padding-right: var(--margin-mobile);
+  }
+  
+  .col8, .col6, .col4, .col3 {
+    grid-column: span 12;
+  }
+  
+  .form {
+    padding: 24px;
+  }
+}
