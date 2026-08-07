@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact &amp; Consultation | VK Software Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#1b1b24",
+                    "surface-dim": "#13121b",
+                    "on-surface": "#e4e1ee",
+                    "inverse-primary": "#4f44e2",
+                    "surface-container-high": "#2a2933",
+                    "on-secondary-fixed": "#0f0069",
+                    "inverse-surface": "#e4e1ee",
+                    "on-secondary-fixed-variant": "#3323cc",
+                    "primary": "#c4c0ff",
+                    "on-primary": "#2000a4",
+                    "tertiary-fixed": "#ffdcc6",
+                    "tertiary": "#ffb785",
+                    "tertiary-fixed-dim": "#ffb785",
+                    "on-tertiary-container": "#461f00",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed-variant": "#3622ca",
+                    "surface-container-lowest": "#0e0d16",
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#c4c0ff",
+                    "inverse-on-surface": "#302f39",
+                    "outline": "#918fa1",
+                    "surface-tint": "#c4c0ff",
+                    "background": "#13121b",
+                    "on-error": "#690005",
+                    "surface-bright": "#393842",
+                    "secondary-fixed": "#e2dfff",
+                    "on-surface-variant": "#c7c4d8",
+                    "on-secondary-container": "#b3b1ff",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-container": "#db761f",
+                    "primary-container": "#8781ff",
+                    "on-primary-fixed": "#100069",
+                    "secondary-fixed-dim": "#c3c0ff",
+                    "surface-container": "#1f1f28",
+                    "secondary": "#c3c0ff",
+                    "on-tertiary-fixed": "#301400",
+                    "on-primary-container": "#1b0091",
+                    "primary-fixed": "#e3dfff",
+                    "secondary-container": "#3626ce",
+                    "on-tertiary": "#502500",
+                    "surface": "#13121b",
+                    "surface-container-highest": "#35343e",
+                    "on-tertiary-fixed-variant": "#713700",
+                    "on-secondary": "#1d00a5",
+                    "on-background": "#e4e1ee",
+                    "outline-variant": "#464555",
+                    "surface-variant": "#35343e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-xl": "64px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "container-max": "1280px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Geist Mono"],
+                    "body-lg": ["Inter"],
+                    "display-xl": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "label-md": ["Geist Mono"],
+                    "headline-lg-mobile": ["Space Grotesk"],
+                    "display-xl-mobile": ["Space Grotesk"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "display-xl": ["72px", {"lineHeight": "76px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-xl-mobile": ["44px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #070B14;
+            color: #e4e1ee;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(21, 28, 47, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-accent {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(196, 192, 255, 0.1) 0%, rgba(196, 192, 255, 0) 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        .floating-label-group {
+            position: relative;
+        }
+        .floating-label-group input, 
+        .floating-label-group textarea {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(145, 143, 161, 0.3);
+            width: 100%;
+            padding: 24px 0 8px 0;
+            transition: border-color 0.3s ease;
+        }
+        .floating-label-group input:focus, 
+        .floating-label-group textarea:focus {
+            outline: none;
+            border-bottom-color: #c4c0ff;
+            box-shadow: none;
+        }
+        .floating-label-group label {
+            position: absolute;
+            top: 24px;
+            left: 0;
+            color: rgba(145, 143, 161, 0.8);
+            pointer-events: none;
+            transition: all 0.2s ease;
+        }
+        .floating-label-group input:focus ~ label,
+        .floating-label-group input:not(:placeholder-shown) ~ label,
+        .floating-label-group textarea:focus ~ label,
+        .floating-label-group textarea:not(:placeholder-shown) ~ label {
+            top: 0;
+            font-size: 12px;
+            color: #c4c0ff;
+        }
+        .btn-premium {
+            background: linear-gradient(135deg, #c4c0ff 0%, #8781ff 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-premium:hover {
+            box-shadow: 0 0 20px rgba(196, 192, 255, 0.4);
+            transform: translateY(-2px);
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .calendar-day {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #151C2F;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .calendar-day:hover:not(.empty) {
+            background: #1f1f28;
+            color: #c4c0ff;
+        }
+        .calendar-day.active {
+            background: #c4c0ff;
+            color: #100069;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary/30">
+<!-- Global Navigation Shell -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] rounded-full bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border border-white/10 shadow-2xl z-50 flex justify-between items-center px-8 py-4 max-w-container-max mx-auto">
+<div class="font-display-xl text-display-xl-mobile md:text-headline-md font-bold tracking-tighter text-on-surface">
+            VK<span class="text-primary">.</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Industries</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Portfolio</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Technologies</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Contact</a>
+</div>
+<a class="btn-premium px-6 py-2.5 rounded-full font-label-md text-on-primary text-label-md shadow-lg" href="#consultation">
+            Book Consultation
+        </a>
+</nav>
+<!-- Hero Background Animation -->
+<div class="fixed inset-0 -z-20 overflow-hidden">
+
+<div class="glow-accent top-[-100px] left-[-100px]"></div>
+<div class="glow-accent bottom-[-100px] right-[-100px]"></div>
+</div>
+<main class="pt-32 pb-stack-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- SECTION: CONTACT & OFFICE CARDS -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-32" id="contact">
+<div class="lg:col-span-5 space-y-stack-md">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em]">Connect with us</span>
+<h1 class="font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface leading-tight">
+                    Let's Build the <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">Future</span> Together.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Whether you're looking for a strategic technology partner or need specialized engineering talent, our team is ready to scale your vision.
+                </p>
+<!-- Office Cards (Bento Style) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-12">
+<div class="glass-panel p-6 rounded-xl hover:translate-x-1">
+<div class="flex items-center gap-2 mb-4 text-primary">
+<span class="material-symbols-outlined">hub</span>
+<span class="font-label-md text-label-md">GLOBAL HQ</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-2">Palo Alto, USA</h3>
+<p class="font-body-md text-on-surface-variant text-sm">
+                            245 Lytton Ave, Suite 300<br/>Palo Alto, CA 94301
+                        </p>
+</div>
+<div class="glass-panel p-6 rounded-xl hover:translate-x-1">
+<div class="flex items-center gap-2 mb-4 text-tertiary">
+<span class="material-symbols-outlined">language</span>
+<span class="font-label-md text-label-md">EUROPE HUB</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-2">Berlin, DE</h3>
+<p class="font-body-md text-on-surface-variant text-sm">
+                            Rosenthaler Str. 40-41<br/>10119 Berlin, Germany
+                        </p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="glass-panel p-8 md:p-12 rounded-3xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full"></div>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="floating-label-group">
+<input id="name" placeholder=" " required="" type="text"/>
+<label for="name">Full Name</label>
+</div>
+<div class="floating-label-group">
+<input id="email" placeholder=" " required="" type="email"/>
+<label for="email">Work Email</label>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="floating-label-group">
+<input id="company" placeholder=" " type="text"/>
+<label for="company">Company</label>
+</div>
+<div class="floating-label-group">
+<select class="w-full bg-transparent border-none border-bottom border-white/10 pt-6 pb-2 text-on-surface-variant focus:ring-0 focus:border-primary appearance-none cursor-pointer" id="subject">
+<option disabled="" selected="" value="">Nature of Inquiry</option>
+<option value="development">Custom Software Development</option>
+<option value="cloud">Cloud Architecture</option>
+<option value="ai">AI &amp; Machine Learning</option>
+<option value="partnership">Strategic Partnership</option>
+</select>
+<div class="absolute right-0 bottom-3 pointer-events-none">
+<span class="material-symbols-outlined text-outline text-sm">expand_more</span>
+</div>
+</div>
+</div>
+<div class="floating-label-group">
+<textarea id="message" placeholder=" " required="" rows="4"></textarea>
+<label for="message">Project Brief / Message</label>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 pt-4">
+<p class="text-label-sm text-on-surface-variant/60 max-w-[300px]">
+                                By submitting this form, you agree to our <a class="text-primary hover:underline" href="#">Privacy Policy</a>.
+                            </p>
+<button class="btn-premium w-full md:w-auto px-10 py-4 rounded-full font-label-md text-label-md text-on-primary flex items-center justify-center gap-2 group" type="submit">
+                                Send Message
+                                <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- SECTION: BOOK CONSULTATION -->
+<section class="pt-32" id="consultation">
+<div class="text-center mb-16 space-y-4">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-[0.2em]">Strategy First</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Book an Expert <span class="text-primary italic">Session</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                    Select a time that works for you. Our solutions architects will dive deep into your technical challenges and provide a roadmap for success.
+                </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter items-start">
+<!-- Calendar Placeholder -->
+<div class="lg:col-span-2 glass-panel p-6 rounded-3xl overflow-hidden">
+<div class="flex items-center justify-between mb-8 px-2">
+<div class="flex items-center gap-4">
+<h4 class="font-headline-md text-on-surface">October 2024</h4>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-white/5 rounded-full text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-2 hover:bg-white/5 rounded-full text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="text-label-md text-on-surface-variant">UTC-07:00 (Pacific Time)</div>
+</div>
+<div class="calendar-grid rounded-xl border border-white/5 overflow-hidden">
+<!-- Header Days -->
+<div class="calendar-day font-label-md text-outline py-4">MON</div>
+<div class="calendar-day font-label-md text-outline py-4">TUE</div>
+<div class="calendar-day font-label-md text-outline py-4">WED</div>
+<div class="calendar-day font-label-md text-outline py-4">THU</div>
+<div class="calendar-day font-label-md text-outline py-4">FRI</div>
+<div class="calendar-day font-label-md text-outline py-4">SAT</div>
+<div class="calendar-day font-label-md text-outline py-4">SUN</div>
+<!-- Empty cells for padding -->
+<div class="calendar-day empty"></div>
+<div class="calendar-day empty"></div>
+<div class="calendar-day">1</div>
+<div class="calendar-day">2</div>
+<div class="calendar-day">3</div>
+<div class="calendar-day font-label-md text-on-surface-variant/20 cursor-not-allowed">4</div>
+<div class="calendar-day font-label-md text-on-surface-variant/20 cursor-not-allowed">5</div>
+<div class="calendar-day">6</div>
+<div class="calendar-day">7</div>
+<div class="calendar-day">8</div>
+<div class="calendar-day active shadow-[0_0_15px_rgba(196,192,255,0.5)]">9</div>
+<div class="calendar-day">10</div>
+<div class="calendar-day font-label-md text-on-surface-variant/20 cursor-not-allowed">11</div>
+<div class="calendar-day font-label-md text-on-surface-variant/20 cursor-not-allowed">12</div>
+<div class="calendar-day">13</div>
+<div class="calendar-day">14</div>
+<div class="calendar-day">15</div>
+<div class="calendar-day">16</div>
+<div class="calendar-day">17</div>
+<div class="calendar-day font-label-md text-on-surface-variant/20 cursor-not-allowed">18</div>
+<div class="calendar-day font-label-md text-on-surface-variant/20 cursor-not-allowed">19</div>
+<div class="calendar-day">20</div>
+<div class="calendar-day">21</div>
+<div class="calendar-day">22</div>
+<div class="calendar-day">23</div>
+<div class="calendar-day">24</div>
+<div class="calendar-day font-label-md text-on-surface-variant/20 cursor-not-allowed">25</div>
+<div class="calendar-day font-label-md text-on-surface-variant/20 cursor-not-allowed">26</div>
+</div>
+</div>
+<!-- Time & Expert Info -->
+<div class="space-y-6">
+<div class="glass-panel p-6 rounded-3xl">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden bg-surface-container-high border border-white/10">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a senior software architect with a minimalist tech background, dramatic high-end studio lighting, soft primary color highlights, cinematic atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBensSbqO5rhUrX8NepN67C7HlRO4Scnlnkz53hfCj37cF0_bLWLlMtbABBLxYWdfQijSXCK_7NCYgRkGvln_ljvexcqXMnibQ2JB_Ie5Ewl4xChZ8P0SctiOMkEduAys3W0qd4Pr1BJAaaRH7eWJJ7iScFDLRGWTYNSw_7rFSJesrucNYD_LEVTMTKxcG51l9KsvE5tXNNI_HRAF8Yr0Tpc7q5dGynRM1vAl3py-uBPCeNBXcua9u8"/>
+</div>
+<div>
+<h5 class="font-label-md text-on-surface">Alex Rivera</h5>
+<p class="text-label-sm text-on-surface-variant">Senior Solutions Architect</p>
+</div>
+</div>
+<div class="space-y-3">
+<p class="font-label-md text-label-md text-primary">Wednesday, Oct 9</p>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 rounded-lg border border-white/10 font-label-md text-sm hover:bg-primary hover:text-on-primary transition-all">09:00 AM</button>
+<button class="py-2 rounded-lg border border-white/10 font-label-md text-sm hover:bg-primary hover:text-on-primary transition-all">10:30 AM</button>
+<button class="py-2 rounded-lg bg-surface-container-high border border-primary/50 text-primary font-label-md text-sm">01:00 PM</button>
+<button class="py-2 rounded-lg border border-white/10 font-label-md text-sm hover:bg-primary hover:text-on-primary transition-all">03:30 PM</button>
+</div>
+</div>
+<button class="btn-premium w-full mt-8 py-4 rounded-xl font-label-md text-label-md text-on-primary shadow-lg">
+                            Confirm Time Slot
+                        </button>
+</div>
+<div class="p-6 border border-white/5 rounded-3xl bg-surface-container-lowest/50">
+<h6 class="font-label-md text-on-surface mb-4">What to expect:</h6>
+<ul class="space-y-4">
+<li class="flex gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                                30-min architecture review
+                            </li>
+<li class="flex gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                                High-level project estimation
+                            </li>
+<li class="flex gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                                Tech stack recommendation
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Global Footer -->
+<footer class="relative w-full py-stack-xl bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-md text-headline-md font-bold text-on-surface mb-6">VK<span class="text-primary">.</span></div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-8">
+                    Engineering next-generation digital experiences for the world's most ambitious brands. Precision in every line of code.
+                </p>
+<div class="flex gap-4">
+<a class="p-2 glass-panel rounded-full hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="p-2 glass-panel rounded-full hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h6 class="font-label-md text-on-surface mb-6 uppercase tracking-wider">Quick Links</h6>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Case Studies</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-label-md text-on-surface mb-6 uppercase tracking-wider">Resources</h6>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">FAQ</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Contact</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Engineering Blog</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-white/5 text-center px-margin-desktop">
+<p class="font-body-md text-body-md text-on-surface-variant/50">
+                © 2024 VK Software Solutions. Engineering Excellence.
+            </p>
+</div>
+</footer>
+<!-- Micro-interaction Scripts -->
+<script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Calendar Day selection logic
+        const days = document.querySelectorAll('.calendar-day:not(.empty):not(.cursor-not-allowed)');
+        days.forEach(day => {
+            day.addEventListener('click', () => {
+                days.forEach(d => d.classList.remove('active', 'shadow-[0_0_15px_rgba(196,192,255,0.5)]'));
+                day.classList.add('active', 'shadow-[0_0_15px_rgba(196,192,255,0.5)]');
+            });
+        });
+
+        // Cursor Glow Effect
+        document.addEventListener('mousemove', (e) => {
+            const glow = document.querySelector('.glow-accent');
+            const x = e.clientX;
+            const y = e.clientY;
+            // Optionally update one of the glow positions slightly for responsiveness
+        });
+    </script>
+</body></html>

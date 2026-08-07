@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Careers | VK Software Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;family=Geist:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#1b1b24",
+                    "surface-dim": "#13121b",
+                    "on-surface": "#e4e1ee",
+                    "inverse-primary": "#4f44e2",
+                    "surface-container-high": "#2a2933",
+                    "on-secondary-fixed": "#0f0069",
+                    "inverse-surface": "#e4e1ee",
+                    "on-secondary-fixed-variant": "#3323cc",
+                    "primary": "#c4c0ff",
+                    "on-primary": "#2000a4",
+                    "tertiary-fixed": "#ffdcc6",
+                    "tertiary": "#ffb785",
+                    "tertiary-fixed-dim": "#ffb785",
+                    "on-tertiary-container": "#461f00",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed-variant": "#3622ca",
+                    "surface-container-lowest": "#0e0d16",
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#c4c0ff",
+                    "inverse-on-surface": "#302f39",
+                    "outline": "#918fa1",
+                    "surface-tint": "#c4c0ff",
+                    "background": "#13121b",
+                    "on-error": "#690005",
+                    "surface-bright": "#393842",
+                    "secondary-fixed": "#e2dfff",
+                    "on-surface-variant": "#c7c4d8",
+                    "on-secondary-container": "#b3b1ff",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-container": "#db761f",
+                    "primary-container": "#8781ff",
+                    "on-primary-fixed": "#100069",
+                    "secondary-fixed-dim": "#c3c0ff",
+                    "surface-container": "#1f1f28",
+                    "secondary": "#c3c0ff",
+                    "on-tertiary-fixed": "#301400",
+                    "on-primary-container": "#1b0091",
+                    "primary-fixed": "#e3dfff",
+                    "secondary-container": "#3626ce",
+                    "on-tertiary": "#502500",
+                    "surface": "#13121b",
+                    "surface-container-highest": "#35343e",
+                    "on-tertiary-fixed-variant": "#713700",
+                    "on-secondary": "#1d00a5",
+                    "on-background": "#e4e1ee",
+                    "outline-variant": "#464555",
+                    "surface-variant": "#35343e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-xl": "64px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "container-max": "1280px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Geist"],
+                    "body-lg": ["Inter"],
+                    "display-xl": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "label-md": ["Geist"],
+                    "headline-lg-mobile": ["Space Grotesk"],
+                    "display-xl-mobile": ["Space Grotesk"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "display-xl": ["72px", {"lineHeight": "76px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-xl-mobile": ["44px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #070B14;
+            color: #e4e1ee;
+            overflow-x: hidden;
+        }
+        .bento-card {
+            background: #151C2F;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            border-color: rgba(196, 192, 255, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -20px rgba(196, 192, 255, 0.15);
+        }
+        .glass-card {
+            background: rgba(21, 28, 47, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #c4c0ff 0%, #3626ce 100%);
+        }
+        .inner-glow {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-glow:hover {
+            text-shadow: 0 0 15px rgba(196, 192, 255, 0.5);
+        }
+        @keyframes subtle-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .float-animation {
+            animation: subtle-float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] rounded-full bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border border-white/10 shadow-2xl z-50 flex justify-between items-center px-8 py-4 max-w-container-max mx-auto transition-transform duration-300 hover:scale-[1.02]">
+<div class="font-display-xl text-display-xl-mobile md:text-headline-md font-bold tracking-tighter text-on-surface">
+            VK Software Solutions
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#">Services</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#">Industries</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#">Portfolio</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#">Technologies</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Careers</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#">Blog</a>
+</div>
+<button class="primary-gradient text-on-primary px-6 py-2 rounded-full font-label-md text-label-md font-bold hover:scale-105 transition-transform duration-300 shadow-lg shadow-primary/20">
+            Book Consultation
+        </button>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-margin-mobile md:px-margin-desktop overflow-hidden">
+
+<div class="relative z-10 text-center max-w-4xl mx-auto">
+<div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-primary-container/20 border border-primary/20 text-primary font-label-sm text-label-sm mb-8 animate-fade-in">
+<span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+                WE ARE HIRING
+            </div>
+<h1 class="font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface leading-none mb-8">
+                Build the Future of <br/>
+<span class="text-primary italic">Digital Products.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                Join an elite team of engineers, designers, and visionaries dedicated to building high-performance software for the world's most ambitious companies.
+            </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<a class="primary-gradient text-on-primary px-10 py-4 rounded-xl font-label-md text-label-md font-bold inner-glow hover:scale-105 transition-all duration-300" href="#roles">
+                    View Open Positions
+                </a>
+<a class="glass-card text-on-surface px-10 py-4 rounded-xl font-label-md text-label-md font-bold hover:bg-surface-variant/50 transition-all duration-300" href="#culture">
+                    Our Culture
+                </a>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-on-surface-variant/50 flex flex-col items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Scroll</span>
+<div class="w-[1px] h-12 bg-gradient-to-b from-primary/50 to-transparent"></div>
+</div>
+</header>
+<!-- Culture Bento Grid -->
+<section class="py-stack-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="culture">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Engineering Excellence, <br/>Human Centricity.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">We believe that great software isn't just about code—it's about the people who write it. Our culture is built on transparency, relentless learning, and technical craftsmanship.</p>
+</div>
+<div class="font-label-md text-label-md text-primary bg-primary/10 px-4 py-2 rounded-lg border border-primary/20">
+                #LifeAtVK
+            </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 grid-rows-2 gap-gutter h-auto md:h-[800px]">
+<!-- Featured Card -->
+<div class="md:col-span-8 md:row-span-2 bento-card rounded-3xl relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent z-10"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A high-end, professional architectural shot of a modern software engineering studio. Engineers work on high-resolution curved monitors in a workspace featuring dark industrial aesthetics, neon accent lighting in soft cyan, and minimalist ergonomic furniture. The atmosphere is quiet, focused, and technologically advanced, with glass partitions reflecting the soft digital glow." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYKKQTsfD8qXUs2gxpCrsi7nBeqT6WBEGaK5735mrbkxjnzlsG-YE6vnhINVKoDsInWS3PQS9aIZ3gtskez1RCMRAJ01QDW-K3uomOmUN_sbPSOupGpGTR4XhZjdA3GIjGuxfdGY_RxbP-b_cn-TZHvWW91wJnQNzQ6rZA-YfjtIk30jK9iqG4R_B7SPd5YdVpduk0ltUFlKkxNK8Wd5JB2M6QsL5dnlMF8vLVxf6qkFwYCb4vpg4g')"></div>
+<div class="absolute bottom-10 left-10 z-20 max-w-md">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">A Space for Visionaries</h3>
+<p class="text-on-surface-variant">Our workspace is designed for deep focus and collaborative breakthroughs, whether in-person or virtual.</p>
+</div>
+</div>
+<!-- Side Card 1 -->
+<div class="md:col-span-4 bento-card rounded-3xl relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent z-10"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Close-up of a collaborative brainstorming session in a tech environment. Team members of diverse backgrounds are looking at a sleek glass whiteboard covered in clean architectural diagrams. The lighting is moody and premium, focusing on the clarity of the technical drawings and the expressions of intense intellectual engagement." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbhsxwZqX0sd3TBoY7rEUuktKe7ZUEE1izNdB1RDR5napPCyxucxdx-BMxRpSEkZGkl_C1SDDeALlA6QjMxTjtf1PrZ9FlVpk_oPagJMXvPZSKPSXoqFP8Sff4HrtsvEdcMp5vMEFEOLUEweCHC-Xs6ql_6FbSMTSiSrYNrMqkVc8N2HJM4YSW5jtwcLw_b0HW3wnKYsU4yqlghvBKjh1i6LQJpIYUP3cOme-w64VqzN9e4x0fazaD')"></div>
+<div class="absolute bottom-6 left-6 z-20">
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Radical Transparency</h4>
+</div>
+</div>
+<!-- Side Card 2 -->
+<div class="md:col-span-4 bento-card rounded-3xl relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent z-10"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A futuristic home office setup for a remote software engineer. A clean oak desk holds high-performance laptops and peripheral devices, framed by large windows showing a serene forest view. The lighting is natural but crisp, embodying a balance between cutting-edge technology and a healthy, remote-first lifestyle." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuANx__7DANUxlkEl6oEDPD0mD1vBnUpZIRqn2k8rQ5UVMF0PDnKMTmWWuMlL1HRMXmQ-EftrO-cKE298KJIQS94bMd0gGdAU5jnMNbDh-fxs6FxudkNrYiX2HSi7KOcnDWisSCWkyMkfwGXTTgHM5bFglC6kF2yqkvNBbO3ava8l6Iid8anCs50Flw1MByW6qLs95Ut7vagWVcSnU9rdE_z_49xPNzGG3pZI5jGLy0LSb1uJmHhiLef')"></div>
+<div class="absolute bottom-6 left-6 z-20">
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Remote Mastery</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits Section -->
+<section class="py-stack-xl bg-surface-container-lowest">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">Invested in Your Growth.</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">We provide the resources and autonomy you need to do your best work and live your best life.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Benefit 1 -->
+<div class="glass-card p-8 rounded-2xl flex flex-col items-start gap-6 group hover:border-primary/40 transition-all">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">public</span>
+</div>
+<div>
+<h3 class="font-headline-md text-[24px] text-on-surface mb-2">Global Remote</h3>
+<p class="text-on-surface-variant font-body-md">Work from anywhere in the world. We value output and impact over office hours.</p>
+</div>
+</div>
+<!-- Benefit 2 -->
+<div class="glass-card p-8 rounded-2xl flex flex-col items-start gap-6 group hover:border-primary/40 transition-all">
+<div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<div>
+<h3 class="font-headline-md text-[24px] text-on-surface mb-2">Next-Gen Tech</h3>
+<p class="text-on-surface-variant font-body-md">Access to the latest hardware and early-release software tools to push boundaries.</p>
+</div>
+</div>
+<!-- Benefit 3 -->
+<div class="glass-card p-8 rounded-2xl flex flex-col items-start gap-6 group hover:border-primary/40 transition-all">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">school</span>
+</div>
+<div>
+<h3 class="font-headline-md text-[24px] text-on-surface mb-2">Learning Budget</h3>
+<p class="text-on-surface-variant font-body-md">An annual $5,000 stipend for courses, conferences, and personal development.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Roles Section -->
+<section class="py-stack-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="roles">
+<div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-8">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Open Roles.</h2>
+<div class="flex items-center gap-4 bg-surface-container-high/50 p-2 rounded-xl border border-white/5">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md shadow-lg shadow-primary/20">All Departments</button>
+<button class="text-on-surface-variant hover:text-primary px-6 py-2 rounded-lg font-label-md text-label-md transition-colors">Engineering</button>
+<button class="text-on-surface-variant hover:text-primary px-6 py-2 rounded-lg font-label-md text-label-md transition-colors">Design</button>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Role 1 -->
+<div class="group flex flex-col md:flex-row justify-between items-center p-8 rounded-2xl bg-surface-container-low border border-white/5 hover:border-primary/30 transition-all duration-300 cursor-pointer">
+<div class="mb-4 md:mb-0">
+<h3 class="font-headline-md text-[20px] text-on-surface group-hover:text-primary transition-colors mb-1">Senior Full-Stack Engineer</h3>
+<div class="flex gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span> Remote</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span> Full-time</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-2">
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-md text-[12px] font-label-sm">React</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-md text-[12px] font-label-sm">Node.js</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-md text-[12px] font-label-sm">AWS</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Role 2 -->
+<div class="group flex flex-col md:flex-row justify-between items-center p-8 rounded-2xl bg-surface-container-low border border-white/5 hover:border-primary/30 transition-all duration-300 cursor-pointer">
+<div class="mb-4 md:mb-0">
+<h3 class="font-headline-md text-[20px] text-on-surface group-hover:text-primary transition-colors mb-1">Lead Product Designer</h3>
+<div class="flex gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span> London / Remote</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span> Full-time</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-2">
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-md text-[12px] font-label-sm">Figma</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-md text-[12px] font-label-sm">UX Strategy</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Role 3 -->
+<div class="group flex flex-col md:flex-row justify-between items-center p-8 rounded-2xl bg-surface-container-low border border-white/5 hover:border-primary/30 transition-all duration-300 cursor-pointer">
+<div class="mb-4 md:mb-0">
+<h3 class="font-headline-md text-[20px] text-on-surface group-hover:text-primary transition-colors mb-1">Infrastructure Architect</h3>
+<div class="flex gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span> Remote</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span> Full-time</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-2">
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-md text-[12px] font-label-sm">Kubernetes</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-md text-[12px] font-label-sm">Terraform</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<p class="text-on-surface-variant font-body-md italic">Don't see your fit? <a class="text-primary underline hover:text-primary-container transition-colors" href="#">Send us a general application</a>.</p>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-stack-xl relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 blur-[120px] rounded-full scale-150 translate-y-1/2"></div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center relative z-10">
+<h2 class="font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface mb-8">Join the Revolution.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                Help us shape the digital landscape of tomorrow. We are looking for the curious, the bold, and the brilliant.
+            </p>
+<button class="primary-gradient text-on-primary px-12 py-5 rounded-xl font-headline-md text-[20px] font-bold shadow-2xl shadow-primary/30 hover:scale-105 transition-all">
+                Submit Your Profile
+            </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="relative w-full py-stack-xl bg-surface-container-lowest border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-surface mb-6">VK Solutions</div>
+<p class="text-on-surface-variant font-body-md mb-8">Engineering excellence for the next generation of digital giants.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-on-surface font-bold font-label-md">Company</h5>
+<a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 font-body-md" href="#">About Us</a>
+<a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 font-body-md" href="#">Careers</a>
+<a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 font-body-md" href="#">Case Studies</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-on-surface font-bold font-label-md">Resources</h5>
+<a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 font-body-md" href="#">Blog</a>
+<a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 font-body-md" href="#">FAQ</a>
+<a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 font-body-md" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-on-surface font-bold font-label-md">Legal</h5>
+<a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 font-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 font-body-md" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-white/5 text-on-surface-variant text-center md:text-left font-label-sm text-label-sm">
+            © 2024 VK Software Solutions. Engineering Excellence.
+        </div>
+</footer>
+<script>
+        // Simple parallax effect for bento cards
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const bentoImages = document.querySelectorAll('.group-hover\\:scale-110');
+            bentoImages.forEach(img => {
+                const rect = img.parentElement.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    img.style.transform = `translateY(${(rect.top - window.innerHeight/2) * 0.05}px) scale(1.1)`;
+                }
+            });
+        });
+
+        // Sticky Navbar reveal/hide
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                nav.style.transform = 'translate(-50%, -150%)';
+            } else {
+                nav.style.transform = 'translate(-50%, 0)';
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body></html>

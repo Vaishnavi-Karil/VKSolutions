@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Industries | VK Software Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#1b1b24",
+                    "surface-dim": "#13121b",
+                    "on-surface": "#e4e1ee",
+                    "inverse-primary": "#4f44e2",
+                    "surface-container-high": "#2a2933",
+                    "on-secondary-fixed": "#0f0069",
+                    "inverse-surface": "#e4e1ee",
+                    "on-secondary-fixed-variant": "#3323cc",
+                    "primary": "#c4c0ff",
+                    "on-primary": "#2000a4",
+                    "tertiary-fixed": "#ffdcc6",
+                    "tertiary": "#ffb785",
+                    "tertiary-fixed-dim": "#ffb785",
+                    "on-tertiary-container": "#461f00",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed-variant": "#3622ca",
+                    "surface-container-lowest": "#0e0d16",
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#c4c0ff",
+                    "inverse-on-surface": "#302f39",
+                    "outline": "#918fa1",
+                    "surface-tint": "#c4c0ff",
+                    "background": "#13121b",
+                    "on-error": "#690005",
+                    "surface-bright": "#393842",
+                    "secondary-fixed": "#e2dfff",
+                    "on-surface-variant": "#c7c4d8",
+                    "on-secondary-container": "#b3b1ff",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-container": "#db761f",
+                    "primary-container": "#8781ff",
+                    "on-primary-fixed": "#100069",
+                    "secondary-fixed-dim": "#c3c0ff",
+                    "surface-container": "#1f1f28",
+                    "secondary": "#c3c0ff",
+                    "on-tertiary-fixed": "#301400",
+                    "on-primary-container": "#1b0091",
+                    "primary-fixed": "#e3dfff",
+                    "secondary-container": "#3626ce",
+                    "on-tertiary": "#502500",
+                    "surface": "#13121b",
+                    "surface-container-highest": "#35343e",
+                    "on-tertiary-fixed-variant": "#713700",
+                    "on-secondary": "#1d00a5",
+                    "on-background": "#e4e1ee",
+                    "outline-variant": "#464555",
+                    "surface-variant": "#35343e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-xl": "64px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "container-max": "1280px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Geist Mono"],
+                    "body-lg": ["Inter"],
+                    "display-xl": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "label-md": ["Geist Mono"],
+                    "headline-lg-mobile": ["Space Grotesk"],
+                    "display-xl-mobile": ["Space Grotesk"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "display-xl": ["72px", {"lineHeight": "76px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-xl-mobile": ["44px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #070B14;
+            color: #e4e1ee;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(21, 28, 47, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(196, 192, 255, 0.15), transparent 60%),
+                        radial-gradient(circle at bottom left, rgba(255, 183, 133, 0.05), transparent 60%);
+        }
+
+        .grid-pattern {
+            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .node-pattern {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .primary-glow {
+            box-shadow: 0 0 40px rgba(196, 192, 255, 0.15);
+        }
+
+        .transition-standard {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .bento-card {
+            background-color: #151C2F;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased">
+<!-- Navigation -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] rounded-full bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border border-white/10 shadow-2xl z-50 flex justify-between items-center px-8 py-4 max-w-container-max mx-auto">
+<div class="font-display-xl text-display-xl-mobile md:text-[24px] font-bold tracking-tighter text-on-surface">
+            VK Software Solutions
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Industries</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Portfolio</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Technologies</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Careers</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:scale-105 transition-standard font-bold">
+            Book Consultation
+        </button>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[716px] flex items-center justify-center pt-32 pb-24 px-margin-mobile md:px-margin-desktop hero-gradient">
+
+<div class="relative z-10 text-center max-w-4xl mx-auto">
+<div class="inline-block mb-6 px-4 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary font-label-sm text-label-sm uppercase tracking-widest">
+                Domain Expertise
+            </div>
+<h1 class="font-display-xl text-display-xl-mobile md:text-display-xl mb-8 leading-tight">
+                Solutions Tailored to Your Industry
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                We engineer high-performance digital ecosystems for market leaders across specialized sectors, combining technical precision with domain-specific insight.
+            </p>
+</div>
+</section>
+<!-- Industry: FinTech -->
+<section class="py-stack-xl px-margin-mobile md:px-margin-desktop bg-surface">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 mb-12 lg:mb-0">
+<span class="font-label-md text-label-md text-primary mb-4 block">01. Banking &amp; Finance</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">High-Stakes <span class="text-primary">FinTech</span> Infrastructure</h2>
+<p class="text-on-surface-variant mb-8 font-body-lg text-body-lg">
+                        Navigating the complexities of modern finance requires more than just code. We build ultra-secure, PCI-compliant payment gateways and banking cores designed for zero-latency execution.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">security</span>
+                            PCI DSS &amp; SOC2 Compliance
+                        </li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">currency_exchange</span>
+                            Real-time Ledger Systems
+                        </li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+                            Fraud Detection Algorithms
+                        </li>
+</ul>
+</div>
+<div class="lg:col-span-7">
+<div class="bento-card rounded-xl aspect-[16/9] relative overflow-hidden flex items-center justify-center p-unit shadow-2xl">
+<div class="absolute inset-0 grid-pattern opacity-10"></div>
+<div class="relative z-10 w-full h-full rounded-lg overflow-hidden border border-white/5">
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-contrast visualization of a modern fintech interface with glowing data lines, sleek dark glass cards, and pulsing primary purple light accents. The scene is futuristic and professional, suggesting high-speed transactions and advanced security protocols within a digital banking environment. Soft atmospheric glows and crisp UI elements create a sense of premium financial technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvG0iX1NiDbJc-3JGDYlGZ4sKpZVIo7Q7XryZXYoPXqPyiw3c8HE52xCviIiV8oSNAhNbOIN5UWnEEcqaQ7yeYnr263Q0sAUatJR8WZLwu3ZippgpjmOBkWM_NijmuzEf1VOK31jo1cLx2EsOn1wC1z1fTy2xm1EqeKhfSl2OK4mupXBkQDxL7grotaFnR1M6IVozghW2kvD0a8OMUIrJcqegk65_JRB6ozqemqikf3jQ4fNnlzeEu"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Industry: Healthcare -->
+<section class="py-stack-xl px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center flex-row-reverse">
+<div class="lg:col-span-7 order-2 lg:order-1">
+<div class="grid grid-cols-2 gap-4">
+<div class="bento-card rounded-xl p-8 aspect-square flex flex-col justify-between border-tertiary/10">
+<span class="material-symbols-outlined text-tertiary text-4xl">medical_services</span>
+<div>
+<h4 class="font-headline-md text-2xl mb-2">Telehealth</h4>
+<p class="text-on-surface-variant text-sm">Encrypted video orchestration.</p>
+</div>
+</div>
+<div class="bento-card rounded-xl p-8 aspect-square flex flex-col justify-between mt-12 bg-surface-container-high">
+<span class="material-symbols-outlined text-primary text-4xl">database</span>
+<div>
+<h4 class="font-headline-md text-2xl mb-2">EHR Systems</h4>
+<p class="text-on-surface-variant text-sm">Seamless patient data flow.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 order-1 lg:order-2 mb-12 lg:mb-0">
+<span class="font-label-md text-label-md text-tertiary mb-4 block">02. Healthcare &amp; Life Sciences</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Patient-First <span class="text-tertiary">Compliance</span></h2>
+<p class="text-on-surface-variant mb-8 font-body-lg text-body-lg">
+                        In healthcare, reliability saves lives. We architect HIPAA-compliant platforms that handle sensitive patient data with military-grade encryption and intuitive clinician workflows.
+                    </p>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 rounded-full bg-tertiary/10 border border-tertiary/20 text-tertiary font-label-sm">HIPAA</span>
+<span class="px-4 py-2 rounded-full bg-tertiary/10 border border-tertiary/20 text-tertiary font-label-sm">GDPR</span>
+<span class="px-4 py-2 rounded-full bg-tertiary/10 border border-tertiary/20 text-tertiary font-label-sm">FHIR API</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Industry: SaaS -->
+<section class="py-stack-xl px-margin-mobile md:px-margin-desktop bg-surface relative overflow-hidden">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+
+</div>
+<div class="max-w-container-max mx-auto relative z-10">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<span class="font-label-md text-label-md text-primary mb-4 block">03. SaaS &amp; Cloud</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Built for Hyper-Growth</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg">
+                    We partner with venture-backed startups and enterprises to build cloud-native SaaS products that scale from 100 to 100M users without missing a beat.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bento-card p-10 rounded-2xl border-t-primary/20 transition-standard hover:-translate-y-2 group">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-standard">
+<span class="material-symbols-outlined text-primary">dynamic_feed</span>
+</div>
+<h3 class="font-headline-md text-2xl mb-4">Scalability</h3>
+<p class="text-on-surface-variant">Kubernetes-orchestrated backends designed for infinite horizontal scaling and multi-tenant isolation.</p>
+</div>
+<div class="bento-card p-10 rounded-2xl border-t-primary/20 transition-standard hover:-translate-y-2 group">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-standard">
+<span class="material-symbols-outlined text-primary">bolt</span>
+</div>
+<h3 class="font-headline-md text-2xl mb-4">Performance</h3>
+<p class="text-on-surface-variant">Global edge distribution and CDN optimization ensuring &lt;100ms response times worldwide.</p>
+</div>
+<div class="bento-card p-10 rounded-2xl border-t-primary/20 transition-standard hover:-translate-y-2 group">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-standard">
+<span class="material-symbols-outlined text-primary">insights</span>
+</div>
+<h3 class="font-headline-md text-2xl mb-4">Intelligence</h3>
+<p class="text-on-surface-variant">Integrated analytics and LLM capabilities to turn platform data into actionable business insights.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Industry: Logistics -->
+<section class="py-stack-xl px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-6 mb-12 lg:mb-0">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/5">
+<div class="absolute inset-0 node-pattern opacity-30"></div>
+<img class="w-full h-[500px] object-cover" data-alt="A dramatic wide-angle shot of a high-tech automated warehouse at night. Robotic arms and autonomous vehicles move along glowing neon tracks. The lighting is dominated by deep indigo and cyan blues with sharp orange highlights on metallic surfaces. The atmosphere is quiet, precise, and highly sophisticated, illustrating the peak of modern industrial automation and logistics engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKVWUxZG_ZrLAHLLAzdKGOlBgMrFpHXj5YtVn4FoGU7Mh5nH1CfI8BmU93SrmZ6DhcYkMIxUE5M2E_AbS1Fpe63VPV3wkUbzgQVH0ryi0m4_b9ag7COBkPBoqpPcuGJJbEtrQRww1NJLtiGbsFOXVfq-poh5ragKt5BCz8UvC8J1Fv-UIsHE5DJ6mAh7XoYrI7cla-RRvLjWgEOZbCBaaN4OLJYfE4f8Lvhc_t5J9gWq7mtNmRrQTU"/>
+</div>
+</div>
+<div class="lg:col-span-6 lg:pl-16">
+<span class="font-label-md text-label-md text-secondary mb-4 block">04. Logistics &amp; Manufacturing</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Automation of <span class="text-secondary">Physical Systems</span></h2>
+<p class="text-on-surface-variant mb-8 font-body-lg text-body-lg">
+                        Bridging the gap between software and the physical world. We build IoT-enabled supply chain platforms and manufacturing execution systems (MES) that optimize every link in the value chain.
+                    </p>
+<div class="space-y-6">
+<div class="flex gap-4 p-4 rounded-lg bg-surface hover:bg-surface-container transition-standard">
+<span class="material-symbols-outlined text-secondary">precision_manufacturing</span>
+<div>
+<h5 class="font-bold">Real-time IoT Monitoring</h5>
+<p class="text-sm text-on-surface-variant">Sensor data fusion for predictive maintenance.</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-lg bg-surface hover:bg-surface-container transition-standard">
+<span class="material-symbols-outlined text-secondary">route</span>
+<div>
+<h5 class="font-bold">Last-Mile Optimization</h5>
+<p class="text-sm text-on-surface-variant">AI-driven route planning for reduced carbon footprint.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-stack-xl px-margin-mobile md:px-margin-desktop text-center relative">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-primary/0 to-primary"></div>
+<div class="max-w-3xl mx-auto pt-12">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8">Ready to evolve your industry footprint?</h2>
+<p class="text-on-surface-variant mb-12 font-body-lg text-body-lg">
+                Let's discuss how our technical expertise can align with your business objectives.
+            </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold hover:scale-105 transition-standard primary-glow">
+                    Start a Project
+                </button>
+<button class="border border-white/20 text-on-surface px-10 py-4 rounded-full font-bold hover:bg-white/5 transition-standard">
+                    View Case Studies
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="relative w-full py-stack-xl border-t border-white/5 bg-surface-container-lowest dark:bg-surface-container-lowest">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-2">
+<div class="font-headline-md text-headline-md font-bold text-on-surface mb-6">VK Software Solutions</div>
+<p class="text-on-surface-variant max-w-sm mb-8 font-body-md text-body-md">
+                    Engineering excellence for the world's most ambitious companies.
+                </p>
+</div>
+<div>
+<h4 class="text-primary font-bold mb-6">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 block" href="#">Case Studies</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 block" href="#">Services</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 block" href="#">FAQ</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 block" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-primary font-bold mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 block" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 block" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-20 text-center border-t border-white/5 pt-8">
+<p class="text-on-surface-variant font-body-md text-body-md">
+                © 2024 VK Software Solutions. Engineering Excellence.
+            </p>
+</div>
+</footer>
+<script>
+        // Subtle parallax and interaction effects
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            document.querySelectorAll('.hero-gradient').forEach(el => {
+                el.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, rgba(196, 192, 255, 0.1), transparent 70%)`;
+            });
+        });
+
+        // Intersection observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

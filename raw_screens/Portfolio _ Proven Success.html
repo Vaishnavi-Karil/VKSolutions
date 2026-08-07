@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio | VK Software Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #070B14;
+            color: #e4e1ee;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(21, 28, 47, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .inner-glow {
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+        }
+        .primary-glow {
+            box-shadow: 0 0 40px rgba(196, 192, 255, 0.15);
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-auto-rows: 10px;
+            gap: 24px;
+        }
+        .masonry-item {
+            grid-row-end: span 45;
+        }
+        .masonry-item-tall {
+            grid-row-end: span 60;
+        }
+        .masonry-item-short {
+            grid-row-end: span 35;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #c4c0ff 0%, #ffb785 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-active {
+            color: #c4c0ff;
+            font-weight: 700;
+            border-bottom: 2px solid #c4c0ff;
+            padding-bottom: 4px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-low": "#1b1b24",
+                      "surface-dim": "#13121b",
+                      "on-surface": "#e4e1ee",
+                      "inverse-primary": "#4f44e2",
+                      "surface-container-high": "#2a2933",
+                      "on-secondary-fixed": "#0f0069",
+                      "inverse-surface": "#e4e1ee",
+                      "on-secondary-fixed-variant": "#3323cc",
+                      "primary": "#c4c0ff",
+                      "on-primary": "#2000a4",
+                      "tertiary-fixed": "#ffdcc6",
+                      "tertiary": "#ffb785",
+                      "tertiary-fixed-dim": "#ffb785",
+                      "on-tertiary-container": "#461f00",
+                      "error": "#ffb4ab",
+                      "on-primary-fixed-variant": "#3622ca",
+                      "surface-container-lowest": "#0e0d16",
+                      "error-container": "#93000a",
+                      "primary-fixed-dim": "#c4c0ff",
+                      "inverse-on-surface": "#302f39",
+                      "outline": "#918fa1",
+                      "surface-tint": "#c4c0ff",
+                      "background": "#13121b",
+                      "on-error": "#690005",
+                      "surface-bright": "#393842",
+                      "secondary-fixed": "#e2dfff",
+                      "on-surface-variant": "#c7c4d8",
+                      "on-secondary-container": "#b3b1ff",
+                      "on-error-container": "#ffdad6",
+                      "tertiary-container": "#db761f",
+                      "primary-container": "#8781ff",
+                      "on-primary-fixed": "#100069",
+                      "secondary-fixed-dim": "#c3c0ff",
+                      "surface-container": "#1f1f28",
+                      "secondary": "#c3c0ff",
+                      "on-tertiary-fixed": "#301400",
+                      "on-primary-container": "#1b0091",
+                      "primary-fixed": "#e3dfff",
+                      "secondary-container": "#3626ce",
+                      "on-tertiary": "#502500",
+                      "surface": "#13121b",
+                      "surface-container-highest": "#35343e",
+                      "on-tertiary-fixed-variant": "#713700",
+                      "on-secondary": "#1d00a5",
+                      "on-background": "#e4e1ee",
+                      "outline-variant": "#464555",
+                      "surface-variant": "#35343e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-xl": "64px",
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "stack-lg": "32px",
+                      "stack-md": "16px",
+                      "stack-sm": "8px",
+                      "container-max": "1280px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Geist"],
+                      "body-lg": ["Inter"],
+                      "display-xl": ["Space Grotesk"],
+                      "headline-md": ["Space Grotesk"],
+                      "label-md": ["Geist"],
+                      "headline-lg-mobile": ["Space Grotesk"],
+                      "display-xl-mobile": ["Space Grotesk"],
+                      "body-md": ["Inter"],
+                      "headline-lg": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                      "display-xl": ["72px", {"lineHeight": "76px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "display-xl-mobile": ["44px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="font-body-md text-body-md bg-background selection:bg-primary/30">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] rounded-full bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border border-white/10 shadow-2xl z-50 flex justify-between items-center px-8 py-4 max-w-container-max mx-auto transition-all duration-300">
+<div class="font-display-xl text-display-xl-mobile md:text-[24px] font-bold tracking-tighter text-on-surface">
+            VK<span class="text-primary">.</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Industries</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Portfolio</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Technologies</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Careers</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Blog</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-md text-label-md font-bold hover:scale-105 transition-transform duration-300 inner-glow">
+            Book Consultation
+        </button>
+</nav>
+<main class="relative pt-[120px]">
+<!-- Atmospheric Background Element -->
+
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-stack-xl relative z-10">
+<div class="max-w-3xl">
+<div class="flex items-center gap-2 mb-stack-sm">
+<span class="w-12 h-[1px] bg-primary"></span>
+<span class="font-label-md text-label-md text-primary tracking-widest">SELECTED WORKS</span>
+</div>
+<h1 class="font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface mb-stack-md leading-none">Engineering <br/><span class="gradient-text">Digital Excellence.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    From deep-tech startups to enterprise giants, we architect systems that redefine industry standards. Explore our portfolio of high-performance software.
+                </p>
+</div>
+</section>
+<!-- Featured Project (Fintech/SaaS Unicorn) -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-[120px] relative z-10">
+<div class="group relative w-full h-[600px] rounded-[32px] overflow-hidden glass-panel inner-glow flex items-end">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="A cinematic, high-resolution visual of a sophisticated Fintech dashboard interface glowing in a dark room. The screen displays complex financial data visualizations, real-time market trends, and secure transaction logs with a deep purple and cyan color palette. The aesthetic is clean, professional, and reflects high-tech precision. The lighting is moody with soft atmospheric glows reflecting off polished surfaces." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACknN3_BQycGPtothhpSVeI8TVM2dZyx7NDrjwRBViwt1gw1f_pYzzjN_PD4gHu3hX11EwTypIL7jirGYSVMDSx167gVQyqZOTYaVUUcn7irUAxf0RPf9DVgw4xUWNA-MS9n7otvil021-lWLLLjLwSTgHAQJu31fOBaJCM9o_0XD40tviyAnCak35BfTX8XAOEIbEP0zPg3eyFkjDQu25uHQyYoobCd4yAHhEeqXoI_YbjPMr6s5O')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 p-12 w-full grid md:grid-cols-2 gap-12 items-end">
+<div>
+<span class="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-sm text-label-sm mb-4">FEATURED CASE STUDY</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">LuminaPay: Redefining Neo-Banking</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-md">
+                            A complete architectural overhaul for a European Fintech unicorn, scaling their processing capacity from 10k to 500k transactions per second.
+                        </p>
+<div class="flex flex-wrap gap-4 mb-8">
+<div class="flex flex-col">
+<span class="text-primary font-label-sm text-label-sm uppercase tracking-tighter">Impact</span>
+<span class="font-headline-md text-on-surface">450% ROI</span>
+</div>
+<div class="w-[1px] h-10 bg-white/10 hidden md:block mx-4"></div>
+<div class="flex flex-col">
+<span class="text-primary font-label-sm text-label-sm uppercase tracking-tighter">Stack</span>
+<span class="font-headline-md text-on-surface">Rust • AWS • Kafka</span>
+</div>
+</div>
+<button class="flex items-center gap-3 bg-white text-background px-8 py-4 rounded-full font-label-md text-label-md font-bold hover:bg-primary transition-all duration-300">
+                            View Case Study <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Industry Filters -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-stack-xl relative z-10">
+<div class="flex flex-wrap items-center gap-4 border-b border-white/5 pb-8">
+<span class="font-label-md text-label-md text-on-surface-variant mr-4">FILTER BY INDUSTRY:</span>
+<button class="px-6 py-2 rounded-full border border-primary bg-primary/10 text-primary font-label-md text-label-md font-bold transition-all duration-300">All Projects</button>
+<button class="px-6 py-2 rounded-full border border-white/5 hover:border-primary/50 text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-all duration-300">FinTech</button>
+<button class="px-6 py-2 rounded-full border border-white/5 hover:border-primary/50 text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-all duration-300">SaaS</button>
+<button class="px-6 py-2 rounded-full border border-white/5 hover:border-primary/50 text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-all duration-300">Healthcare</button>
+<button class="px-6 py-2 rounded-full border border-white/5 hover:border-primary/50 text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-all duration-300">AI &amp; Machine Learning</button>
+</div>
+</section>
+<!-- Masonry Grid Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-[120px] relative z-10">
+<div class="masonry-grid">
+<!-- Project 1: AI Analytics -->
+<div class="masonry-item-tall group relative rounded-[24px] overflow-hidden glass-panel inner-glow flex flex-col">
+<div class="h-2/3 w-full relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Abstract 3D visualization of neural networks and data flow, rendered with glowing particles in shades of neon blue and violet. The style is futuristic and cinematic, emphasizing deep space and complex connectivity. High-quality digital render for an AI technology background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAOO3mGZKNb-PnIPLML-CfwWREHH2N7MBU9g8U6KaQxNyrP0YiAWcjxhy0qRXs2A-an_tBUW8_jPse2tQciee_LTlUiBX6O2agU80UG0yiOWC8_51HXCJ6GLyyUjQCH9jXssGnLmt5m9I6Ov1LFez2ybeosSMOH44nAZJEX48GuMVCQzGMXY5lmJJ0kjCl8L-XB81zxJ_LMSrMOSP3Ci3WCo-K_h1-E18JJpWAyIMv6-ni0c1Qmh4TF')"></div>
+<div class="absolute top-4 right-4 bg-background/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+<span class="font-label-sm text-label-sm text-primary">AI &amp; ML</span>
+</div>
+</div>
+<div class="p-8 flex-grow flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-on-surface mb-2">NeuralStream AI</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Real-time predictive analytics for supply chain optimization.</p>
+</div>
+<div class="border-t border-white/5 pt-6 flex justify-between items-end">
+<div>
+<p class="text-[10px] uppercase text-primary tracking-widest font-bold mb-1">TECH STACK</p>
+<p class="font-label-sm text-label-sm text-on-surface">Python • PyTorch • GCP</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">north_east</span>
+</div>
+</div>
+</div>
+<!-- Project 2: SaaS Enterprise -->
+<div class="masonry-item group relative rounded-[24px] overflow-hidden glass-panel inner-glow flex flex-col">
+<div class="h-1/2 w-full relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A high-end, modern workspace environment with minimalist Apple-style hardware on a dark wood desk. The lighting is atmospheric, focusing on a primary monitor showing a clean SaaS project management interface with vibrant color accents. Professional photography with shallow depth of field." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVVW2WbTeDNjLePuuiw63N6KmV3f-4QE-Nujn6nGz1PKzXKD-SwoXp6MeA7VARAaOt9sb2BsSk0NYD1Q28llOQnrzddSYTrojrSJ7l4Par7qv7MSeQynmvKAt-kp2HIrVV_ft-cT5Pa_Y6wh_SFPgYQPav_AfgkNH6ercYbS_W4N6_BdYEZZ8r5yJk0CqaDCN40fdBSkdsOkN9g3mWL8Uprx7bhFk_kjZ0bem2XhZ_CLTrFoxTLSHC')"></div>
+<div class="absolute top-4 right-4 bg-background/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+<span class="font-label-sm text-label-sm text-tertiary">SaaS</span>
+</div>
+</div>
+<div class="p-8 flex-grow flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-on-surface mb-2">OmniCollab Pro</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Enterprise-grade collaboration platform for distributed teams.</p>
+</div>
+<div class="border-t border-white/5 pt-6 flex justify-between items-end">
+<div>
+<p class="text-[10px] uppercase text-primary tracking-widest font-bold mb-1">BUSINESS IMPACT</p>
+<p class="font-label-sm text-label-sm text-on-surface">80% User Retention</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">north_east</span>
+</div>
+</div>
+</div>
+<!-- Project 3: Healthcare App -->
+<div class="masonry-item-short group relative rounded-[24px] overflow-hidden glass-panel inner-glow flex flex-col">
+<div class="p-8 flex-grow flex flex-col justify-between">
+<div class="mb-6">
+<div class="inline-block px-3 py-1 rounded-full bg-error-container/20 border border-error-container/40 text-error font-label-sm text-label-sm mb-4">HEALTHCARE</div>
+<h3 class="font-headline-md text-on-surface mb-2">MediCloud Hub</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">HIPAA-compliant patient data management with zero-latency sync.</p>
+</div>
+<div class="border-t border-white/5 pt-6 flex justify-between items-end">
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-white/5 rounded text-[10px] text-on-surface-variant">NODE.JS</span>
+<span class="px-2 py-1 bg-white/5 rounded text-[10px] text-on-surface-variant">MONGO DB</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Project 4: Blockchain/Fintech -->
+<div class="masonry-item-tall group relative rounded-[24px] overflow-hidden glass-panel inner-glow flex flex-col">
+<div class="h-2/3 w-full relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Macro photography of a high-tech circuit board with glowing copper paths and integrated circuits. Cyan and gold light leaks illuminate the metallic textures. The visual symbolizes security, blockchain, and hardware-level precision. Cinematic lighting, dark background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWi7RPNZiScc4UTSg9ersRMJVyDxDG50bqEwsVIIxCjcHoSk_0XeDlpD5ULz1WXWtwUf2sBTohuvvEuPUcfixVRzHl9cCrFqV8Oa2daavA3ckjEA1FGAZjgKBTiK_gkzadfTS8WEXSb2DWEIVGyeBA-obqY788ivcQz4JvNQbwJC8lqNW_kN2oScbdU45g2V6Yt9ylPBjnewNKUQToCcV6NhbSNRhZjQKSEKNTxhe-KegjZV5sl-P1')"></div>
+<div class="absolute top-4 right-4 bg-background/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+<span class="font-label-sm text-label-sm text-primary">FINTECH</span>
+</div>
+</div>
+<div class="p-8 flex-grow flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-on-surface mb-2">Vault Protocol</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Decentralized asset management for institutional investors.</p>
+</div>
+<div class="border-t border-white/5 pt-6 flex justify-between items-end">
+<div>
+<p class="text-[10px] uppercase text-primary tracking-widest font-bold mb-1">SECURITY</p>
+<p class="font-label-sm text-label-sm text-on-surface">Triple-Audit Verified</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">north_east</span>
+</div>
+</div>
+</div>
+<!-- Project 5: Creative Agency SaaS -->
+<div class="masonry-item group relative rounded-[24px] overflow-hidden glass-panel inner-glow flex flex-col">
+<div class="h-1/2 w-full relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Creative studio environment with large format digital art prints on the wall and a modern dual-monitor setup showing vibrant motion graphics software. The room is filled with soft natural light mixed with RGB ambient glows. Luxury aesthetic, high-end photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaQiLg4fwzZK2_eHZq6AEb4kXE52lZT1q-RmaD72osssuoFKSsvse4dRZbyTP7SflaPqLNICns6AC83VffmENX8I8WYqWp6l7USca3-fQvpVQ11MPnXXxbto2eqJEYTBoqTxJNdDE6mDUt2n5Tg4MK94xqsVL4WknBB5P_P5FcS0FcChYH1i2vuOpdo6Ss7NG4nHAoLac9S0kgYHeQlCw91X6izi0_IQdnhVrH0-0hefWloo85pzyp')"></div>
+<div class="absolute top-4 right-4 bg-background/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+<span class="font-label-sm text-label-sm text-tertiary">SaaS</span>
+</div>
+</div>
+<div class="p-8 flex-grow flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-on-surface mb-2">Canvas Flow</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Automated workflow engine for global creative agencies.</p>
+</div>
+<div class="border-t border-white/5 pt-6 flex justify-between items-end">
+<div>
+<p class="text-[10px] uppercase text-primary tracking-widest font-bold mb-1">EFFICIENCY</p>
+<p class="font-label-sm text-label-sm text-on-surface">40% Time Saved</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">north_east</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-stack-xl relative z-10 text-center">
+<div class="glass-panel inner-glow rounded-[40px] py-20 px-8 relative overflow-hidden">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/20 blur-[120px] rounded-full -translate-y-1/2"></div>
+<h2 class="font-display-xl text-display-xl-mobile md:text-headline-lg text-on-surface mb-6 relative z-10">Ready to build your next <br/><span class="text-primary">Success Story?</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto relative z-10">
+                    Join the ranks of market leaders who chose VK Software Solutions for their critical infrastructure and visionary products.
+                </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6 relative z-10">
+<button class="w-full md:w-auto bg-primary text-on-primary px-10 py-4 rounded-full font-label-md text-label-md font-bold hover:scale-105 transition-transform duration-300">
+                        Start a Project
+                    </button>
+<button class="w-full md:w-auto bg-white/5 text-on-surface border border-white/10 px-10 py-4 rounded-full font-label-md text-label-md font-bold hover:bg-white/10 transition-all duration-300">
+                        View More Insights
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest relative w-full py-stack-xl border-t border-white/5 mt-[120px]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-6">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">VK<span class="text-primary">.</span></div>
+<p class="font-body-md text-body-md text-on-surface-variant">Engineering excellence for the next generation of digital leaders.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full glass-panel flex items-center justify-center hover:bg-primary transition-all duration-300" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a>
+<a class="w-10 h-10 rounded-full glass-panel flex items-center justify-center hover:bg-primary transition-all duration-300" href="#"><span class="material-symbols-outlined text-[20px]">alternate_email</span></a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-on-surface font-bold">Solutions</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1" href="#">Custom Software</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1" href="#">AI Integration</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1" href="#">Cloud Architecture</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1" href="#">UI/UX Design</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-on-surface font-bold">Resources</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1" href="#">Case Studies</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1" href="#">Technical Blog</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1" href="#">FAQ</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1" href="#">Whitepapers</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-on-surface font-bold">Company</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1" href="#">Careers</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1" href="#">Contact</a>
+</div>
+</div>
+<div class="mt-stack-xl px-margin-desktop max-w-container-max mx-auto border-t border-white/5 pt-8 text-center md:text-left">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 VK Software Solutions. Engineering Excellence.</p>
+</div>
+</footer>
+<script>
+        // Simple filter interaction logic
+        const filterButtons = document.querySelectorAll('button[class*="rounded-full"]');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Mock active state toggle
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-primary/10', 'text-primary', 'border-primary');
+                    b.classList.add('border-white/5', 'text-on-surface-variant');
+                });
+                btn.classList.remove('border-white/5', 'text-on-surface-variant');
+                btn.classList.add('bg-primary/10', 'text-primary', 'border-primary');
+            });
+        });
+
+        // Hover tilt effect for masonry items
+        const cards = document.querySelectorAll('.masonry-item, .masonry-item-tall, .masonry-item-short');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const xc = rect.width / 2;
+                const yc = rect.height / 2;
+                const dx = x - xc;
+                const dy = y - yc;
+                card.style.transform = `perspective(1000px) rotateY(${dx / 40}deg) rotateX(${-dy / 40}deg)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg)`;
+            });
+        });
+    </script>
+</body></html>

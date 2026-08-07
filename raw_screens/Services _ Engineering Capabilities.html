@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | VK Software Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;family=Geist+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Shared Style Guidance Tokens -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#1b1b24",
+                    "surface-dim": "#13121b",
+                    "on-surface": "#e4e1ee",
+                    "inverse-primary": "#4f44e2",
+                    "surface-container-high": "#2a2933",
+                    "on-secondary-fixed": "#0f0069",
+                    "inverse-surface": "#e4e1ee",
+                    "on-secondary-fixed-variant": "#3323cc",
+                    "primary": "#c4c0ff",
+                    "on-primary": "#2000a4",
+                    "tertiary-fixed": "#ffdcc6",
+                    "tertiary": "#ffb785",
+                    "tertiary-fixed-dim": "#ffb785",
+                    "on-tertiary-container": "#461f00",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed-variant": "#3622ca",
+                    "surface-container-lowest": "#0e0d16",
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#c4c0ff",
+                    "inverse-on-surface": "#302f39",
+                    "outline": "#918fa1",
+                    "surface-tint": "#c4c0ff",
+                    "background": "#13121b",
+                    "on-error": "#690005",
+                    "surface-bright": "#393842",
+                    "secondary-fixed": "#e2dfff",
+                    "on-surface-variant": "#c7c4d8",
+                    "on-secondary-container": "#b3b1ff",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-container": "#db761f",
+                    "primary-container": "#8781ff",
+                    "on-primary-fixed": "#100069",
+                    "secondary-fixed-dim": "#c3c0ff",
+                    "surface-container": "#1f1f28",
+                    "secondary": "#c3c0ff",
+                    "on-tertiary-fixed": "#301400",
+                    "on-primary-container": "#1b0091",
+                    "primary-fixed": "#e3dfff",
+                    "secondary-container": "#3626ce",
+                    "on-tertiary": "#502500",
+                    "surface": "#13121b",
+                    "surface-container-highest": "#35343e",
+                    "on-tertiary-fixed-variant": "#713700",
+                    "on-secondary": "#1d00a5",
+                    "on-background": "#e4e1ee",
+                    "outline-variant": "#464555",
+                    "surface-variant": "#35343e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-xl": "64px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "container-max": "1280px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Geist Mono"],
+                    "body-lg": ["Inter"],
+                    "display-xl": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "label-md": ["Geist Mono"],
+                    "headline-lg-mobile": ["Space Grotesk"],
+                    "display-xl-mobile": ["Space Grotesk"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "display-xl": ["72px", {"lineHeight": "76px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-xl-mobile": ["44px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #070B14;
+            color: #e4e1ee;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(21, 28, 47, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(196, 192, 255, 0.3);
+            background: rgba(21, 28, 47, 0.6);
+        }
+        .sticky-headline {
+            position: sticky;
+            top: 120px;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .primary-gradient-text {
+            background: linear-gradient(135deg, #c4c0ff 0%, #ffb785 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hover-glow:hover {
+            box-shadow: 0 0 40px rgba(196, 192, 255, 0.15);
+        }
+        .inner-glow-button {
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- TopNavBar Integration -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] rounded-full bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border border-white/10 shadow-2xl z-50 flex justify-between items-center px-8 py-4 max-w-container-max mx-auto transition-transform duration-300">
+<div class="font-display-xl text-display-xl-mobile font-bold tracking-tighter text-on-surface">VKSS</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Services</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Industries</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Portfolio</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Technologies</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Careers</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Blog</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md inner-glow-button hover:scale-105 transition-transform">Book Consultation</button>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[819px] flex items-center justify-center pt-32 overflow-hidden px-margin-mobile md:px-margin-desktop">
+
+<div class="relative z-10 text-center max-w-4xl">
+<span class="inline-block px-4 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary font-label-sm text-label-sm mb-6">Expertise Redefined</span>
+<h1 class="font-display-xl text-display-xl-mobile md:text-display-xl tracking-tighter mb-8">
+                Full-Cycle <span class="primary-gradient-text">Engineering</span> Excellence
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                We bridge the gap between vision and reality through high-performance software engineering, cinematic design, and intelligent infrastructure.
+            </p>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop space-y-[160px] pb-stack-xl">
+<!-- Custom Software Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter" id="custom-software">
+<div class="md:col-span-5">
+<div class="sticky-headline">
+<span class="font-label-md text-label-md text-primary mb-4 block">01 — Core Engineering</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Custom Software Development</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">End-to-end bespoke solutions designed to solve complex business challenges with scalable architecture.</p>
+</div>
+</div>
+<div class="md:col-span-7 space-y-6">
+<div class="glass-card p-stack-lg rounded-xl hover-glow group">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">architecture</span>
+<h3 class="font-headline-md text-headline-md">Enterprise Systems</h3>
+</div>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center gap-2 group-hover:translate-x-2 transition-transform"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> ERP &amp; CRM Development</li>
+<li class="flex items-center gap-2 group-hover:translate-x-2 transition-transform"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Legacy System Modernization</li>
+<li class="flex items-center gap-2 group-hover:translate-x-2 transition-transform"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> High-Availability Distributed Systems</li>
+</ul>
+</div>
+<div class="glass-card p-stack-lg rounded-xl hover-glow overflow-hidden relative min-h-[300px]">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="A dark, cinematic visualization of a high-tech data center with glowing blue and violet lights reflecting off metallic surfaces, symbolizing enterprise software architecture. The scene uses deep blacks and primary-color accents to match a luxury digital studio aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCaOX9_u6r0ATSjCjJNGrC1wfkevfP29YMyFuZu8LTtW_t6rsrBXdIv02QaVQvVRtN1i-v37X9ZZHoXCGLPFxgd0zuOgLNpin76p1nOOpfwYcQAAjFhvwNvaOw58rtcJQ4IQEXsj72OfF5VMW5bZrAl_Cz9-KV13PkAXB_7gSNdFwbulXqrOwhFlVRhX2vDSA9maqTU-6NrwS1sLhGbz1xyjnfVvEspoZXlLOGBn6TolCe-EEyaLRbb')"></div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md mb-2">Scalable Microservices</h3>
+<p class="font-body-md text-body-md">Building modular components that grow with your user base.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Web & Mobile Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter" id="platforms">
+<div class="md:col-span-5 md:order-2">
+<div class="sticky-headline">
+<span class="font-label-md text-label-md text-tertiary mb-4 block">02 — Experience Platforms</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Web &amp; Mobile Ecosystems</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Crafting high-performance digital interfaces that captivate users across every screen size.</p>
+</div>
+</div>
+<div class="md:col-span-7 md:order-1 space-y-6">
+<div class="bento-grid">
+<div class="col-span-12 md:col-span-7 glass-card p-stack-lg rounded-xl group">
+<span class="material-symbols-outlined text-tertiary mb-4" style="font-variation-settings: 'FILL' 1;">devices</span>
+<h3 class="font-headline-md text-headline-md mb-4">Mobile Apps</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Native iOS, Android, and cross-platform solutions using React Native and Flutter.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container rounded-full text-label-sm font-label-sm border border-white/5">Biometrics</span>
+<span class="px-3 py-1 bg-surface-container rounded-full text-label-sm font-label-sm border border-white/5">Offline First</span>
+<span class="px-3 py-1 bg-surface-container rounded-full text-label-sm font-label-sm border border-white/5">Real-time Sync</span>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 glass-card p-stack-lg rounded-xl group">
+<span class="material-symbols-outlined text-tertiary mb-4" style="font-variation-settings: 'FILL' 1;">language</span>
+<h3 class="font-headline-md text-headline-md mb-4">Web Apps</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Progressive Web Apps and high-speed React/Next.js platforms.</p>
+</div>
+</div>
+<div class="glass-card p-stack-lg rounded-xl">
+<h3 class="font-headline-md text-headline-md mb-6">Cross-Device Features</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 border border-white/5 rounded-lg hover:bg-white/5 transition-colors">
+<h4 class="font-label-md text-label-md text-tertiary mb-1">Performance</h4>
+<p class="text-xs text-on-surface-variant">99+ Lighthouse scores and sub-second load times.</p>
+</div>
+<div class="p-4 border border-white/5 rounded-lg hover:bg-white/5 transition-colors">
+<h4 class="font-label-md text-label-md text-tertiary mb-1">Accessibility</h4>
+<p class="text-xs text-on-surface-variant">Full WCAG compliance for inclusive digital products.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI & Cloud Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter" id="intelligence">
+<div class="md:col-span-5">
+<div class="sticky-headline">
+<span class="font-label-md text-label-md text-primary mb-4 block">03 — Intelligence &amp; Scale</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">AI &amp; Cloud Infrastructure</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Powering your growth with predictive intelligence and resilient cloud-native architectures.</p>
+</div>
+</div>
+<div class="md:col-span-7 space-y-8">
+<div class="relative p-stack-lg glass-card rounded-2xl overflow-hidden">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/20 rounded-full blur-[100px]"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary-container text-4xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<h3 class="font-headline-md text-headline-md">Artificial Intelligence</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-2">LLM Integration</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Custom fine-tuning and deployment of Large Language Models for automated workflows.</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-2">Predictive Analytics</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Data-driven insights to forecast trends and optimize business operations.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-stack-lg glass-card rounded-2xl border-l-4 border-l-primary-container">
+<h3 class="font-headline-md text-headline-md mb-4">Cloud DevOps</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center p-3 hover:bg-white/5 rounded-lg transition-colors">
+<span class="font-body-md">AWS/Azure/GCP Management</span>
+<span class="material-symbols-outlined text-on-surface-variant">arrow_forward</span>
+</div>
+<div class="flex justify-between items-center p-3 hover:bg-white/5 rounded-lg transition-colors">
+<span class="font-body-md">Kubernetes &amp; Docker Orchestration</span>
+<span class="material-symbols-outlined text-on-surface-variant">arrow_forward</span>
+</div>
+<div class="flex justify-between items-center p-3 hover:bg-white/5 rounded-lg transition-colors">
+<span class="font-body-md">CI/CD Pipeline Automation</span>
+<span class="material-symbols-outlined text-on-surface-variant">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- UI/UX Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter" id="design">
+<div class="md:col-span-5 md:order-2">
+<div class="sticky-headline">
+<span class="font-label-md text-label-md text-tertiary mb-4 block">04 — Visual Identity</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Product Design &amp; UX</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Design that goes beyond aesthetics to create intuitive, emotional connections with your brand.</p>
+</div>
+</div>
+<div class="md:col-span-7 md:order-1">
+<div class="grid grid-cols-1 gap-6">
+<div class="group h-[400px] rounded-3xl overflow-hidden relative cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A macro shot of a sleek, futuristic digital user interface displayed on a high-resolution glass tablet. The design features minimalist typography in Space Grotesk, translucent cards, and soft ambient glows in shades of violet and cyan. The lighting is moody and cinematic, highlighting the tactile quality of the digital elements in a dark luxury setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ4lWNYwcMGy8ejcFYZKHY6Uq2ISAuuvJDlTE1mHbDbQKTmtY2NflGSPFNI27pZU7WbSKKhCkaWz2Zhcwcw0ZBI0P0_PVW13B_pyAikEaJQ8WpeAxya9Jn-nJTQX3CgU7LEWO1pOVZWIAFDtdTTWWlTnSQMidoA22lSc0W2PWGhWdvGrTUcI7YzJHqECCqT7aBO4E4B4nFAWih8t-0yB_2owSo9YuWidPvIGH32iyFONhGSUZbIwEg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-stack-lg">
+<h3 class="font-headline-md text-headline-md text-white mb-2">Cinematic Interfaces</h3>
+<p class="font-body-md text-white/70">Crafting high-fidelity prototypes and design systems.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="glass-card p-stack-md rounded-2xl">
+<span class="material-symbols-outlined text-tertiary mb-2">visibility</span>
+<h4 class="font-headline-md text-headline-md text-sm mb-1">User Research</h4>
+<p class="text-xs text-on-surface-variant">Behavioral analysis and user testing sessions.</p>
+</div>
+<div class="glass-card p-stack-md rounded-2xl">
+<span class="material-symbols-outlined text-tertiary mb-2">brush</span>
+<h4 class="font-headline-md text-headline-md text-sm mb-1">Brand Systems</h4>
+<p class="text-xs text-on-surface-variant">Scalable visual languages for multi-platform products.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="relative py-stack-xl rounded-[40px] overflow-hidden bg-primary-container/10 border border-primary/10 text-center">
+
+<div class="relative z-10 max-w-2xl mx-auto px-margin-mobile">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Ready to scale your engineering team?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">Let's discuss how our technical expertise can accelerate your product roadmap.</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-headline-md text-lg inner-glow-button hover:scale-105 transition-transform">Start Project</button>
+<button class="bg-surface border border-white/10 text-on-surface px-10 py-4 rounded-full font-headline-md text-lg hover:bg-white/5 transition-colors">View Portfolio</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Integration -->
+<footer class="relative w-full py-stack-xl bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-surface mb-4">VKSS</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Engineering excellence for the visionaries of tomorrow.</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-6">Navigation</h4>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Services</a></li>
+<li><a class="hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Industries</a></li>
+<li><a class="hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Technologies</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-6">Resources</h4>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Case Studies</a></li>
+<li><a class="hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">FAQ</a></li>
+<li><a class="hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-6">Legal</h4>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-stack-xl pt-8 border-t border-white/5 text-center font-body-md text-body-md text-on-surface-variant">
+            © 2024 VK Software Solutions. Engineering Excellence.
+        </div>
+</footer>
+<script>
+        // Smooth scroll handling for sticky headlines
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(section);
+        });
+
+        // Simple parallax effect for images
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            document.querySelectorAll('.parallax').forEach(el => {
+                const speed = 0.5;
+                el.style.transform = `translateY(${scroll * speed}px)`;
+            });
+            
+            // Header hide/show on scroll
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-primary/5');
+            } else {
+                nav.classList.remove('shadow-primary/5');
+            }
+        });
+    </script>
+</body></html>

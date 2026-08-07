@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VK Software Solutions | Engineering Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#1b1b24",
+                        "surface-dim": "#13121b",
+                        "on-surface": "#e4e1ee",
+                        "inverse-primary": "#4f44e2",
+                        "surface-container-high": "#2a2933",
+                        "on-secondary-fixed": "#0f0069",
+                        "inverse-surface": "#e4e1ee",
+                        "on-secondary-fixed-variant": "#3323cc",
+                        "primary": "#c4c0ff",
+                        "on-primary": "#2000a4",
+                        "tertiary-fixed": "#ffdcc6",
+                        "tertiary": "#ffb785",
+                        "tertiary-fixed-dim": "#ffb785",
+                        "on-tertiary-container": "#461f00",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#3622ca",
+                        "surface-container-lowest": "#0e0d16",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#c4c0ff",
+                        "inverse-on-surface": "#302f39",
+                        "outline": "#918fa1",
+                        "surface-tint": "#c4c0ff",
+                        "background": "#13121b",
+                        "on-error": "#690005",
+                        "surface-bright": "#393842",
+                        "secondary-fixed": "#e2dfff",
+                        "on-surface-variant": "#c7c4d8",
+                        "on-secondary-container": "#b3b1ff",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#db761f",
+                        "primary-container": "#8781ff",
+                        "on-primary-fixed": "#100069",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "surface-container": "#1f1f28",
+                        "secondary": "#c3c0ff",
+                        "on-tertiary-fixed": "#301400",
+                        "on-primary-container": "#1b0091",
+                        "primary-fixed": "#e3dfff",
+                        "secondary-container": "#3626ce",
+                        "on-tertiary": "#502500",
+                        "surface": "#13121b",
+                        "surface-container-highest": "#35343e",
+                        "on-tertiary-fixed-variant": "#713700",
+                        "on-secondary": "#1d00a5",
+                        "on-background": "#e4e1ee",
+                        "outline-variant": "#464555",
+                        "surface-variant": "#35343e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-xl": "64px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "display-xl": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "label-md": ["Geist"],
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "display-xl-mobile": ["Space Grotesk"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "display-xl": ["72px", {"lineHeight": "76px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-xl-mobile": ["44px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #070B14;
+            color: #e4e1ee;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(21, 28, 47, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .animate-scroll {
+            animation: scroll 40s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .inner-glow {
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #c4c0ff 0%, #3626ce 100%);
+        }
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+        .light-leak {
+            background: radial-gradient(circle at center, rgba(196, 192, 255, 0.15) 0%, transparent 70%);
+            filter: blur(40px);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] rounded-full bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border border-white/10 shadow-2xl flex justify-between items-center px-8 py-4 max-w-container-max mx-auto z-50">
+<div class="font-display-xl text-display-xl-mobile md:text-headline-md font-bold tracking-tighter text-on-surface">VK Software Solutions</div>
+<div class="hidden md:flex gap-8">
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1 transition-colors duration-300" href="#">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Industries</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Portfolio</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Technologies</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Careers</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Blog</a>
+</div>
+<button class="primary-gradient px-6 py-2 rounded-full font-label-md text-on-primary hover:scale-105 transition-transform duration-300 inner-glow">
+            Book Consultation
+        </button>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#070B14]/40 to-[#070B14]"></div>
+<div class="relative w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop z-10 grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 lg:col-span-7">
+<div class="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-sm text-label-sm mb-6 uppercase tracking-widest">
+                    Next-Gen Engineering
+                </div>
+<h1 class="font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface mb-8 leading-[0.95]">
+                    Engineering Excellence at the <span class="text-primary italic">Speed of Thought.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12 opacity-80">
+                    We build enterprise-grade digital products for the world's most ambitious companies. Precision-crafted software architecture that scales with your vision.
+                </p>
+<div class="flex flex-wrap gap-6">
+<button class="primary-gradient px-8 py-4 rounded-xl font-label-md text-on-primary hover:shadow-[0_0_30px_rgba(196,192,255,0.4)] transition-all duration-300 flex items-center gap-2">
+                        Book a Consultation
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="glass-card px-8 py-4 rounded-xl font-label-md text-on-surface hover:bg-white/5 transition-all duration-300 border border-white/10">
+                        View Portfolio
+                    </button>
+</div>
+</div>
+</div>
+<!-- Floating Tech Elements -->
+<div class="absolute right-[5%] top-[20%] hidden lg:block">
+<div class="relative w-96 h-96">
+<div class="floating absolute top-0 right-0 w-24 h-24 glass-card rounded-2xl flex items-center justify-center p-6" style="animation-delay: -1s;">
+<span class="material-symbols-outlined text-[48px] text-primary" style="font-variation-settings: 'FILL' 1;">developer_board</span>
+</div>
+<div class="floating absolute bottom-0 left-0 w-20 h-20 glass-card rounded-2xl flex items-center justify-center p-4" style="animation-delay: -3s;">
+<span class="material-symbols-outlined text-[36px] text-tertiary" style="font-variation-settings: 'FILL' 1;">cloud</span>
+</div>
+<div class="floating absolute top-1/2 left-0 w-16 h-16 glass-card rounded-2xl flex items-center justify-center p-4" style="animation-delay: -5s;">
+<span class="material-symbols-outlined text-[24px] text-secondary">database</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Trusted By -->
+<section class="py-12 border-y border-white/5 bg-surface-container-lowest/50">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden whitespace-nowrap relative">
+<div class="flex items-center gap-24 animate-scroll">
+<!-- Logos repeat for continuous loop -->
+<div class="flex gap-24 items-center opacity-40 grayscale contrast-125">
+<div class="flex items-center gap-2 text-headline-md font-bold text-on-surface"><span class="material-symbols-outlined">api</span> QUANTUM</div>
+<div class="flex items-center gap-2 text-headline-md font-bold text-on-surface"><span class="material-symbols-outlined">all_inclusive</span> NEXUS</div>
+<div class="flex items-center gap-2 text-headline-md font-bold text-on-surface"><span class="material-symbols-outlined">bolt</span> VOLT</div>
+<div class="flex items-center gap-2 text-headline-md font-bold text-on-surface"><span class="material-symbols-outlined">radar</span> PULSE</div>
+<div class="flex items-center gap-2 text-headline-md font-bold text-on-surface"><span class="material-symbols-outlined">token</span> CRYPTO</div>
+</div>
+<div class="flex gap-24 items-center opacity-40 grayscale contrast-125">
+<div class="flex items-center gap-2 text-headline-md font-bold text-on-surface"><span class="material-symbols-outlined">api</span> QUANTUM</div>
+<div class="flex items-center gap-2 text-headline-md font-bold text-on-surface"><span class="material-symbols-outlined">all_inclusive</span> NEXUS</div>
+<div class="flex items-center gap-2 text-headline-md font-bold text-on-surface"><span class="material-symbols-outlined">bolt</span> VOLT</div>
+<div class="flex items-center gap-2 text-headline-md font-bold text-on-surface"><span class="material-symbols-outlined">radar</span> PULSE</div>
+<div class="flex items-center gap-2 text-headline-md font-bold text-on-surface"><span class="material-symbols-outlined">token</span> CRYPTO</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Section -->
+<section class="py-stack-xl max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Our Capabilities</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">We bridge the gap between complex engineering challenges and seamless user experiences through modular, high-performance solution sets.</p>
+</div>
+<a class="text-primary font-label-md flex items-center gap-2 hover:translate-x-2 transition-transform duration-300" href="#">
+                Explore all services <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<div class="bento-grid">
+<!-- 1. Custom Software (Featured Large) -->
+<div class="col-span-12 lg:col-span-8 p-10 glass-card rounded-3xl relative overflow-hidden group">
+<div class="absolute -right-20 -top-20 w-80 h-80 light-leak opacity-20 group-hover:opacity-40 transition-opacity"></div>
+<div class="relative z-10 flex flex-col md:flex-row gap-12 h-full">
+<div class="flex-1">
+<span class="material-symbols-outlined text-primary text-headline-lg mb-6" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Custom Software Architecture</h3>
+<p class="text-on-surface-variant mb-8 max-w-md">Building resilient, distributed systems that handle millions of requests without breaking a sweat.</p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Microservices Orchestration</li>
+<li class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Event-Driven Systems</li>
+<li class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> High-Performance Backends</li>
+</ul>
+</div>
+<div class="flex-1 bg-surface-dim/80 border border-white/5 rounded-xl p-4 font-label-sm text-[13px] text-on-surface-variant/70 overflow-hidden shadow-2xl">
+<div class="flex gap-2 mb-4">
+<div class="w-3 h-3 rounded-full bg-error/40"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary/40"></div>
+<div class="w-3 h-3 rounded-full bg-primary/40"></div>
+</div>
+<code class="block font-mono leading-relaxed">
+<span class="text-tertiary">async function</span> <span class="text-primary">deploySystem</span>() {<br/>
+                              <span class="text-on-surface-variant">const</span> cluster = <span class="text-tertiary">await</span> Kubernetes.init();<br/>
+                              cluster.scale({ <span class="text-primary">replicas</span>: 50 });<br/>
+                              <span class="text-on-surface-variant/40">// Auto-healing enabled</span><br/>
+                              <span class="text-tertiary">return</span> cluster.status;<br/>
+                            }
+                        </code>
+</div>
+</div>
+</div>
+<!-- 2. Cloud & DevOps -->
+<div class="col-span-12 md:col-span-6 lg:col-span-4 p-10 glass-card rounded-3xl border-primary/20 bg-gradient-to-br from-surface-container-low to-surface-dim group">
+<span class="material-symbols-outlined text-secondary text-headline-lg mb-6 group-hover:scale-110 transition-transform duration-500">cloud_done</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Cloud &amp; DevOps</h3>
+<p class="text-on-surface-variant mb-6">Zero-downtime deployments and automated infrastructure that scale globally in seconds.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-label-sm">AWS</span>
+<span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-label-sm">Terraform</span>
+<span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-label-sm">CI/CD</span>
+</div>
+</div>
+<!-- 3. AI & Data -->
+<div class="col-span-12 md:col-span-6 lg:col-span-5 p-10 glass-card rounded-3xl overflow-hidden group">
+<div class="flex flex-col h-full justify-between">
+<div>
+<span class="material-symbols-outlined text-tertiary text-headline-lg mb-6">psychology</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">AI &amp; Data Intelligence</h3>
+<p class="text-on-surface-variant mb-8">Transforming raw data into predictive insights with custom LLMs and neural networks.</p>
+</div>
+<div class="relative h-40 mt-auto">
+<!-- Simulated Data Viz -->
+<div class="absolute bottom-0 left-0 w-full flex items-end gap-2 h-32">
+<div class="flex-1 bg-tertiary/20 rounded-t-lg group-hover:h-[80%] transition-all duration-700 delay-100 h-[40%] border-t border-tertiary/40"></div>
+<div class="flex-1 bg-tertiary/30 rounded-t-lg group-hover:h-[60%] transition-all duration-700 delay-200 h-[70%] border-t border-tertiary/40"></div>
+<div class="flex-1 bg-tertiary/20 rounded-t-lg group-hover:h-[90%] transition-all duration-700 delay-300 h-[50%] border-t border-tertiary/40"></div>
+<div class="flex-1 bg-tertiary/50 rounded-t-lg group-hover:h-[70%] transition-all duration-700 delay-400 h-[30%] border-t border-tertiary/40"></div>
+<div class="flex-1 bg-tertiary/40 rounded-t-lg group-hover:h-[100%] transition-all duration-700 delay-500 h-[60%] border-t border-tertiary/40"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Web & Mobile -->
+<div class="col-span-12 lg:col-span-7 p-10 glass-card rounded-3xl group overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center h-full">
+<div>
+<span class="material-symbols-outlined text-primary text-headline-lg mb-6">devices</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Web &amp; Mobile Products</h3>
+<p class="text-on-surface-variant mb-6">Crafting immersive interfaces that delight users on every device, from mobile apps to desktop platforms.</p>
+<button class="text-primary font-label-md flex items-center gap-2">
+                            View Case Studies <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+<div class="relative">
+<div class="w-full aspect-video bg-surface-container-high rounded-xl border border-white/10 shadow-2xl relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="A premium UI dashboard design with glassmorphism elements, vibrant purple accents, and dark professional aesthetic for a web application." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMatp05TlV4woz6-Hvq_y75UyXRWaVjanht7FRtnQuwp7hkhgPXr_OEvTHkWR9KKBjWI7ZjEaeGLqqIw9ob3DH5T748eXDeVWSqHMpicQUMdS051Ui3JgtZPXENz1w9CDeIdMgO8gx-jVlol4GitrXco-HeC-0CbbVwgIaVOcvjUwtqprvtkHAeTvDrNAjPkgnYh3snRNwltHHnVZHHDmmYFaUlstCP33ui00PiYvb3xb7OKnOCT4a')"></div>
+</div>
+<div class="absolute -bottom-6 -left-6 w-32 aspect-[9/19] bg-surface-container-highest rounded-2xl border border-white/20 shadow-2xl overflow-hidden hidden md:block">
+<div class="w-full h-full bg-cover bg-center" data-alt="A mobile app interface showing a clean financial dashboard with dark mode styling, neon purple chart lines, and minimalist iconography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAcLHAfSuaz4gpjZbiQ6kqXc7zCnAftn34vS-RdjHaVgAcXcq7N6VtI2vRSKEgeq9YrEGDI0row8HeAt8QhmOCob9v_4IKpnbLdF10kdyjdaNq7k0pKQ1tXk-iO00Rw0-EGk8ejPiBzwDMMfPQQaUEYnXsl8MuBwzX3JQhQo9ho8ytShGXwWXl0gfYXiLHEMUG94JUfj0kZV3TRGUfNPUDgCdByO4l2aLGQFL9YGPOKO5FuNO0opv--')"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-stack-xl relative overflow-hidden">
+<div class="absolute inset-0 light-leak opacity-10"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+<div>
+<div class="font-display-xl text-primary mb-2">500+</div>
+<div class="font-label-md text-on-surface-variant uppercase tracking-widest">Projects Delivered</div>
+</div>
+<div>
+<div class="font-display-xl text-secondary mb-2">50M+</div>
+<div class="font-label-md text-on-surface-variant uppercase tracking-widest">Users Impacted</div>
+</div>
+<div>
+<div class="font-display-xl text-tertiary mb-2">98%</div>
+<div class="font-label-md text-on-surface-variant uppercase tracking-widest">Client Retention</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Stack Wall -->
+<section class="py-stack-xl bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center mb-16">
+<h2 class="font-headline-md text-on-surface mb-4">Our Technology Arsenal</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">We use only the most reliable and modern technologies to ensure your product stands the test of time.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-12 md:gap-24 opacity-60 px-8">
+<div class="flex flex-col items-center gap-4 transition-all hover:scale-110 hover:opacity-100">
+<span class="material-symbols-outlined text-[64px] text-[#61DAFB]">rebase</span>
+<span class="font-label-md">React</span>
+</div>
+<div class="flex flex-col items-center gap-4 transition-all hover:scale-110 hover:opacity-100">
+<span class="material-symbols-outlined text-[64px] text-on-surface">deployed_code</span>
+<span class="font-label-md">Next.js</span>
+</div>
+<div class="flex flex-col items-center gap-4 transition-all hover:scale-110 hover:opacity-100">
+<span class="material-symbols-outlined text-[64px] text-[#339933]">settings_input_component</span>
+<span class="font-label-md">Node.js</span>
+</div>
+<div class="flex flex-col items-center gap-4 transition-all hover:scale-110 hover:opacity-100">
+<span class="material-symbols-outlined text-[64px] text-[#FF9900]">cloud_queue</span>
+<span class="font-label-md">AWS</span>
+</div>
+<div class="flex flex-col items-center gap-4 transition-all hover:scale-110 hover:opacity-100">
+<span class="material-symbols-outlined text-[64px] text-[#326CE5]">group_work</span>
+<span class="font-label-md">Kubernetes</span>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-stack-xl relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative h-[600px] flex items-center justify-center overflow-hidden lg:overflow-visible">
+<div class="absolute top-0 left-0 max-w-lg">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Proven Partners</h2>
+<p class="text-on-surface-variant">What global leaders say about our engineering culture and commitment to delivery.</p>
+</div>
+<!-- Overlapping Glass Cards -->
+<div class="relative w-full h-full flex items-center justify-center">
+<div class="glass-card p-8 rounded-2xl w-[320px] absolute transform -translate-x-32 -translate-y-12 rotate-[-4deg] z-10 hover:z-30 transition-all hover:scale-105 duration-300">
+<p class="text-on-surface-variant italic mb-6">"VK Software didn't just build our app; they reinvented our entire digital supply chain architecture."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/20 border border-primary/30"></div>
+<div>
+<div class="font-label-md text-on-surface">Marcus Chen</div>
+<div class="text-label-sm text-on-surface-variant opacity-60">CTO, Nexus Corp</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-8 rounded-2xl w-[320px] absolute transform translate-x-20 translate-y-12 rotate-[2deg] z-20 hover:z-30 transition-all hover:scale-105 duration-300">
+<p class="text-on-surface-variant italic mb-6">"Their DevOps team resolved bottlenecks we'd been fighting for years in less than a month."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/20 border border-secondary/30"></div>
+<div>
+<div class="font-label-md text-on-surface">Sarah Jenkins</div>
+<div class="text-label-sm text-on-surface-variant opacity-60">VP Engineering, Volt</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-8 rounded-2xl w-[320px] absolute transform -translate-x-10 translate-y-32 rotate-[-2deg] z-15 hover:z-30 transition-all hover:scale-105 duration-300 hidden md:block">
+<p class="text-on-surface-variant italic mb-6">"The precision and speed of delivery were unlike anything I've seen in 15 years of tech."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary/20 border border-tertiary/30"></div>
+<div>
+<div class="font-label-md text-on-surface">Elena Rodriguez</div>
+<div class="text-label-sm text-on-surface-variant opacity-60">Founder, Pulse AI</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="relative w-full py-stack-xl bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-white/5 font-body-md text-body-md">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-surface mb-6">VK Software</div>
+<p class="text-on-surface-variant mb-6 opacity-70">Architecting the digital future with engineering precision and artistic soul.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:text-primary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:text-primary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[18px]">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<div class="font-label-md text-on-surface uppercase tracking-widest mb-6">Quick Links</div>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 block" href="#">Case Studies</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 block" href="#">FAQ</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 block" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<div class="font-label-md text-on-surface uppercase tracking-widest mb-6">Legal</div>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 block" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 block" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<div class="font-label-md text-on-surface uppercase tracking-widest mb-6">Join the Revolution</div>
+<p class="text-on-surface-variant mb-4 text-label-sm">Get the latest insights on engineering and product strategy.</p>
+<form class="flex gap-2">
+<input class="flex-1 bg-surface-dim border border-white/10 rounded-lg px-4 py-2 text-label-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Email address" type="email"/>
+<button class="primary-gradient p-2 rounded-lg text-on-primary">
+<span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-white/5 max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4 text-label-sm text-on-surface-variant/40">
+<div>© 2024 VK Software Solutions. Engineering Excellence.</div>
+<div class="flex gap-8">
+<span>London</span>
+<span>San Francisco</span>
+<span>Singapore</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and hover effects
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

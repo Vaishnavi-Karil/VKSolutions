@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LuminaPay Case Study | VK Software Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;family=Geist+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/npm/geist-font@1.1.0/fonts/geist-sans/Geist-Medium.woff2') format('woff2');
+        }
+        
+        body {
+            background-color: #070B14;
+            color: #e4e1ee;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .glass-card {
+            background: #151C2F;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+        }
+
+        .inner-glow {
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .primary-gradient {
+            background: linear-gradient(135deg, #c4c0ff 0%, #8781ff 100%);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #e4e1ee, #c4c0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "surface-container-low": "#1b1b24",
+                "surface-dim": "#13121b",
+                "on-surface": "#e4e1ee",
+                "inverse-primary": "#4f44e2",
+                "surface-container-high": "#2a2933",
+                "on-secondary-fixed": "#0f0069",
+                "inverse-surface": "#e4e1ee",
+                "on-secondary-fixed-variant": "#3323cc",
+                "primary": "#c4c0ff",
+                "on-primary": "#2000a4",
+                "tertiary-fixed": "#ffdcc6",
+                "tertiary": "#ffb785",
+                "tertiary-fixed-dim": "#ffb785",
+                "on-tertiary-container": "#461f00",
+                "error": "#ffb4ab",
+                "on-primary-fixed-variant": "#3622ca",
+                "surface-container-lowest": "#0e0d16",
+                "error-container": "#93000a",
+                "primary-fixed-dim": "#c4c0ff",
+                "inverse-on-surface": "#302f39",
+                "outline": "#918fa1",
+                "surface-tint": "#c4c0ff",
+                "background": "#13121b",
+                "on-error": "#690005",
+                "surface-bright": "#393842",
+                "secondary-fixed": "#e2dfff",
+                "on-surface-variant": "#c7c4d8",
+                "on-secondary-container": "#b3b1ff",
+                "on-error-container": "#ffdad6",
+                "tertiary-container": "#db761f",
+                "primary-container": "#8781ff",
+                "on-primary-fixed": "#100069",
+                "secondary-fixed-dim": "#c3c0ff",
+                "surface-container": "#1f1f28",
+                "secondary": "#c3c0ff",
+                "on-tertiary-fixed": "#301400",
+                "on-primary-container": "#1b0091",
+                "primary-fixed": "#e3dfff",
+                "secondary-container": "#3626ce",
+                "on-tertiary": "#502500",
+                "surface": "#13121b",
+                "surface-container-highest": "#35343e",
+                "on-tertiary-fixed-variant": "#713700",
+                "on-secondary": "#1d00a5",
+                "on-background": "#e4e1ee",
+                "outline-variant": "#464555",
+                "surface-variant": "#35343e"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+              },
+              "spacing": {
+                "stack-xl": "64px",
+                "unit": "8px",
+                "margin-mobile": "20px",
+                "margin-desktop": "64px",
+                "stack-lg": "32px",
+                "stack-md": "16px",
+                "stack-sm": "8px",
+                "container-max": "1280px",
+                "gutter": "24px"
+              },
+              "fontFamily": {
+                "label-sm": ["Geist"],
+                "body-lg": ["Inter"],
+                "display-xl": ["Space Grotesk"],
+                "headline-md": ["Space Grotesk"],
+                "label-md": ["Geist"],
+                "headline-lg-mobile": ["Space Grotesk"],
+                "display-xl-mobile": ["Space Grotesk"],
+                "body-md": ["Inter"],
+                "headline-lg": ["Space Grotesk"]
+              },
+              "fontSize": {
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                "display-xl": ["72px", {"lineHeight": "76px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "display-xl-mobile": ["44px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="selection:bg-primary/30 selection:text-primary">
+<!-- Global Navigation -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] rounded-full bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border border-white/10 shadow-2xl z-50 flex justify-between items-center px-8 py-4 max-w-container-max mx-auto">
+<div class="font-display-xl text-display-xl-mobile md:text-headline-md font-bold tracking-tighter text-on-surface">VK.SS</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Industries</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Portfolio</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Technologies</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Careers</a>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform duration-300 cubic-bezier(0.4,0,0.2,1)">
+            Book Consultation
+        </button>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-40 pb-20 overflow-hidden">
+
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="flex flex-col items-start gap-stack-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary bg-primary/10 px-4 py-1 rounded-full border border-primary/20">Fintech Case Study</span>
+<h1 class="font-display-xl text-display-xl-mobile md:text-display-xl leading-tight max-w-4xl">
+                    Redefining <span class="text-gradient">Digital Banking</span> for LuminaPay
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Building the next generation of frictionless cross-border payments through high-performance engineering and visceral user experiences.
+                </p>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="space-y-[120px] pb-stack-xl">
+<!-- Hero Photography -->
+<section class="max-w-container-max mx-auto px-margin-desktop">
+<div class="rounded-3xl overflow-hidden glass-card h-[600px] relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, high-fidelity hero image of a futuristic digital banking interface displayed on a premium smartphone. The device is set against a dark, moody background with subtle cyan and violet light leaks reflecting off the glass surface. The interface shows dynamic transaction visualizations and elegant typography, emphasizing technical excellence and a premium financial experience for a global brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYfsQD4hlmGCRD4amQsLLgWdOZMlwGYU1ylxvx2MlEzgFy0HcEveTvSPrU2NiUTj8PH4C5CICBv4Q7uWkr5s_kjEi1rRcHfhKHjJNPOugOt6y9C1FBHc5DdF_OTxb_p-pkWaKvHO5JbB2b-R3DSn0cQhdgFOUYtexMa54fF4aKg6fK7Ij6zVOyTF5f18iyMWL1j6SCcjMgFwUYj8s0sedta0puDo6fZk3byxOkRvdwvG_u4_cmaTYg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+</div>
+</section>
+<!-- The Challenge -->
+<section class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg sticky top-32">The Challenge</h2>
+</div>
+<div class="md:col-span-8 space-y-stack-lg">
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        LuminaPay approached us with a fragmented legacy infrastructure that struggled with transaction latency and high dropout rates in cross-border transfers. Their existing mobile application failed to resonate with a modern, tech-savvy demographic, lacking the speed and visual feedback required for high-stakes financial operations.
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="glass-card p-stack-lg rounded-2xl inner-glow">
+<span class="material-symbols-outlined text-primary mb-4" style="font-size: 32px;">speed</span>
+<h3 class="font-headline-md text-headline-md mb-2">Latency Issues</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Transaction confirmation times averaged over 12 seconds, leading to user anxiety and failed state synchronization.</p>
+</div>
+<div class="glass-card p-stack-lg rounded-2xl inner-glow">
+<span class="material-symbols-outlined text-primary mb-4" style="font-size: 32px;">security</span>
+<h3 class="font-headline-md text-headline-md mb-2">Scale &amp; Trust</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Scaling to 500k concurrent users required a radical shift in backend architecture and real-time security protocols.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Bento Grid -->
+<section class="max-w-container-max mx-auto px-margin-desktop">
+<div class="bento-grid">
+<div class="col-span-12 md:col-span-7 glass-card p-stack-xl rounded-3xl inner-glow flex flex-col justify-end relative overflow-hidden h-[400px]">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-symbols-outlined text-primary/20" style="font-size: 160px;">trending_up</span>
+</div>
+<div class="relative z-10">
+<div class="text-primary font-display-xl text-6xl mb-2">450%</div>
+<div class="font-headline-md text-headline-md">ROI Realized</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-sm">Direct impact on operational efficiency through automated reconciliation and reduced support tickets.</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 bg-primary p-stack-xl rounded-3xl flex flex-col justify-between h-[400px]">
+<div class="font-label-sm text-label-sm text-on-primary uppercase tracking-widest font-bold">User Adoption</div>
+<div class="flex flex-col">
+<div class="text-on-primary font-display-xl text-6xl leading-none">500k</div>
+<div class="text-on-primary/80 font-headline-md text-headline-md">Active Users</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 glass-card p-stack-lg rounded-3xl inner-glow h-[300px] flex flex-col items-center justify-center text-center">
+<div class="text-4xl font-bold mb-2">0.4s</div>
+<div class="text-on-surface-variant">Average Latency</div>
+</div>
+<div class="col-span-12 md:col-span-8 glass-card p-stack-lg rounded-3xl inner-glow h-[300px] relative overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-1000" data-alt="A top-down detailed shot of a high-tech server room with glowing blue status lights and organized cabling, representing cutting-edge backend infrastructure. The lighting is cold and atmospheric, with sharp reflections on metallic surfaces, conveying a sense of immense power and technical precision consistent with a premium software engineering studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE7NDaSAooHaxm6kWpAD6ph6hKT8pV0y6oofAq9itGQufu1k4JDGXhinL9uau1PE-ON998-TmK94-I1OGwPkYv7Knr56w5iXplb7tDtpuogHC47AVXufQApbIkI6U38e6LoGlj0BlIuk9JNq1mcTN1c2DlsStz1XZRUVcPpWan6USzFOBLnTEQiVwbH1XxNEGzEp-RNxFR1Ku5Vt9LaPrKsr_5xvnhDXZpPoilsNt1GJNU0eoC3t8l"/>
+<div class="relative z-10 flex flex-col h-full justify-end">
+<h4 class="font-headline-md text-headline-md">Global Distribution</h4>
+<p class="text-on-surface-variant">Active in 42 countries with seamless regulatory compliance.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- The Solution & Tech Stack -->
+<section class="max-w-container-max mx-auto px-margin-desktop bg-surface-container-low rounded-[48px] py-stack-xl relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter relative z-10 px-8">
+<div class="md:col-span-5 space-y-stack-lg">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">The Architecture</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        We developed a distributed microservices ecosystem utilizing Rust for the mission-critical transaction core, ensuring memory safety and extreme performance. The frontend was built with React and Framer Motion to create a tactile, "physical" feeling UI.
+                    </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors group">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center font-label-md text-primary border border-white/10 group-hover:border-primary/50">RS</div>
+<div>
+<div class="font-bold">Rust Core</div>
+<div class="text-label-sm text-on-surface-variant">Transactional Reliability</div>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors group">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center font-label-md text-primary border border-white/10 group-hover:border-primary/50">AWS</div>
+<div>
+<div class="font-bold">AWS Infrastructure</div>
+<div class="text-label-sm text-on-surface-variant">Multi-region Availability</div>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors group">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center font-label-md text-primary border border-white/10 group-hover:border-primary/50">RE</div>
+<div>
+<div class="font-bold">React &amp; Typescript</div>
+<div class="text-label-sm text-on-surface-variant">Responsive Immersive UX</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-7 flex items-center justify-center">
+<div class="w-full aspect-square glass-card rounded-3xl p-stack-lg flex items-center justify-center relative inner-glow">
+<!-- Placeholder for Architecture Diagram -->
+<div class="w-full h-full border-2 border-dashed border-white/10 rounded-2xl flex flex-col items-center justify-center p-8 text-center space-y-4">
+<span class="material-symbols-outlined text-primary/40" style="font-size: 64px;">hub</span>
+<div class="font-headline-md text-on-surface-variant/60">Distributed Microservices Architecture</div>
+<p class="font-label-sm text-on-surface-variant/40">Highly redundant node clusters across 3 global regions with automated failover and zero-trust security layers.</p>
+</div>
+<div class="absolute -bottom-6 -left-6 p-6 glass-card rounded-2xl inner-glow animate-float">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-green-500 shadow-[0_0_10px_#22c55e]"></div>
+<span class="font-label-sm">Backend Health: 99.99%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Deep Dive Image -->
+<section class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="rounded-3xl overflow-hidden h-[400px]">
+<img class="w-full h-full object-cover" data-alt="A macro shot of a sleek developer workspace with high-end mechanical keyboard, multi-monitor setup displaying complex lines of code, and minimal desk accessories. The room is dimly lit with ambient violet neon strips, focusing on the craftsmanship and dedicated environment of a high-performance software engineer. The style is modern, technical, and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcW9k-dw2BfhWHVG8y7x4jG-RK2iXDgeoqepKZCvYuqlNTAXicAM9_cIrsgFEHtqJ181olHYvvTBqcqyhzroPrMfdoKa1-wtvUQ3x0y9-PysQhDCDFRkK_p44N1cQfvyQceUb1Konr2yvOgvvc8LkdojxYgOZM6_QApFyL4BheoQ3-dzcu1oDcklPVU1jrN5eyqjNCpk_tYdxWI5Uu71UuRmdho3vGdkPj-bb-6R0sC7L0jZG8Czg1"/>
+</div>
+<div class="flex flex-col justify-center space-y-stack-md">
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Performance as a Feature</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        We treated latency as a bug. Every millisecond shaved off the transaction flow was a direct win for user trust. By optimizing the binary serialization and utilizing edge computing for regional data processing, we achieved speeds that were previously deemed impossible in regulated banking.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Next Project Navigation -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-stack-xl border-t border-white/10">
+<a class="group block" href="#">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-stack-md">
+<div class="space-y-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Next Project</span>
+<div class="font-display-xl text-display-xl-mobile md:text-display-xl group-hover:text-primary transition-colors duration-500">Autonomous Logistics Hub</div>
+</div>
+<div class="flex items-center gap-4 group-hover:translate-x-4 transition-transform duration-500">
+<span class="font-headline-md text-headline-md">View Case</span>
+<span class="material-symbols-outlined text-primary" style="font-size: 48px;">arrow_forward</span>
+</div>
+</div>
+</a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest relative w-full py-stack-xl border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-4">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">VK.SS</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 VK Software Solutions. Engineering Excellence.</p>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-primary mb-4">Resources</h5>
+<ul class="space-y-2 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Case Studies</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Whitepapers</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-primary mb-4">Company</h5>
+<ul class="space-y-2 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-all duration-200 hover:translate-x-1 inline-block" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-primary mb-4">Newsletter</h5>
+<div class="flex gap-2">
+<input class="bg-surface border border-white/10 rounded-lg px-4 py-2 text-on-surface focus:border-primary focus:ring-0 w-full font-body-md" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary p-2 rounded-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth reveal on scroll micro-interaction
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+
+        // Sticky nav effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'bg-surface/90');
+                nav.classList.remove('py-4', 'bg-surface/80');
+            } else {
+                nav.classList.add('py-4', 'bg-surface/80');
+                nav.classList.remove('py-2', 'bg-surface/90');
+            }
+        });
+    </script>
+</body></html>
